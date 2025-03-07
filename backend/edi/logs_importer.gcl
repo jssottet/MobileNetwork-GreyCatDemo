@@ -1,0 +1,124 @@
+use io;
+use runtime;
+use model;
+
+
+fn importData() {
+    //Initialize global CU index (entry point) if not already done
+    nrCellCU_by_nRCellId ?= nodeList<node<NrCellCU>>::new();
+
+
+    var reader = JsonReader::new("data/json/test.json");
+    /*
+    var UEbyTime = nodeIndex<int, UE>::new();
+    var UEbyZone = nodeIndex<int, UE>::new();
+    */
+
+    while(reader.available() > 0) {
+        var parsedArray = reader.read() as Array;
+        for(position, arrayElement in parsedArray) {
+            var ran = arrayElement.get("RAN");
+
+            var nrCellCUJsonObj = ran.get("NrCellCU");
+            var nrCellDUJsonObj = ran.get("NrCellDU");
+                
+
+
+            /*
+            Retrieve or create the NrCellCU for this log record
+            */
+            var cellId = nrCellCUJsonObj.get("nrCellID") as int;
+            //Search in the global index is a nbCellCU already exists for this cellId
+            var nrCellCU_node = nrCellCU_by_nRCellId.get(cellId);
+            var nrCellCU: NrCellCU;
+            if(nrCellCU_node == null) {
+                //If not, create the obejct, put it in a node, reference this node in the index for this cellId
+                 nrCellCU = NrCellCU {
+                    nRCellId: cellId,
+                    physicalCellId: nrCellDUJsonObj.get("PIC") as int,
+                    nrCellDU_by_index: nodeList<node<NrCellDU>>::new(),
+                    nrCellDU_by_duId: nodeList<node<NrCellDU>>::new(),
+                };
+                nrCellCU_node = node<NrCellCU>::new(nrCellCU);
+                nrCellCU_by_nRCellId.set(cellId, nrCellCU_node);
+            } else {
+                //Else simply resolve the node to retrieve its content (the actual nrCellCU object)
+                nrCellCU = *nrCellCU_node;
+            }
+
+            /*
+            Retrieve or create the NrCellDU for this log record
+            */
+            var duId = nrCellDUJsonObj.get("NrCellDuId") as int;
+            //Look for the DU in the local index of the CU
+            var nrCellDU_node = nrCellCU.nrCellDU_by_duId.get(duId);
+            var nrCellDU: NrCellDU;
+            if(nrCellDU_node == null) {
+
+                var bwpJsonObj = nrCellDUJsonObj.get("BWP");
+                var bwp = BWP {
+                    subCarrierSpacing : bwpJsonObj.get("SCS") as int,
+                    numberOfRBs : bwpJsonObj.get("PRB") as int,
+                }; 
+
+                nrCellDU = NrCellDU {
+                    nrCellCU: nrCellCU_node,
+                    nRCellId: cellId,
+                    physicalCellId: nrCellDUJsonObj.get("PIC") as int,
+                    ssb: SSB {
+                        arfcn: nrCellDUJsonObj.get("SSB") as int
+                    },
+                    policy: CommunicationTypeUtils::parseCommuncationType(nrCellDUJsonObj.get("Policy") as String),
+                    bwp : bwp,
+                    userEquipments: nodeTime<nodeList<node<UE>>>::new(),
+                };
+                nrCellDU_node = node<NrCellDU>::new(nrCellDU);
+                nrCellCU.nrCellDU_by_duId.set(duId, nrCellDU_node);
+            } else {
+                nrCellDU = *nrCellDU_node;
+            }
+
+
+            var ueJsonObj = ran.get("UE");
+            if(ueJsonObj != null) {
+                var timestamp : int = ran.get("timestamp") as int;
+                var t = time::new(timestamp, DurationUnit::minutes);
+                //Get list of UE on the DU at time t
+                var ueListAtT = nrCellDU.userEquipments.resolveAt(t);
+                var ue_node = ueListAtT?.get(ueJsonObj.get("id") as int);
+                if(ue_node == null) {
+                    //If UE does not yet exists in the list
+                    ue_node = node<UE>::new(UE {
+                        du: nrCellDU_node,
+                        rnti: ueJsonObj.get("RNTI") as String,
+                        id: ueJsonObj.get("id") as int,
+                        position: 1,
+                        synchronizationSignal:  nodeTime<SynchronizationSignal>::new(),
+                        pdus: nodeList<PDUSession>::new(),
+                    });
+                    
+                    //Update the list by copying the previous and setting the new at time t
+                    var newUeListAtT = nodeList<node<UE>>::new();
+                    if(ueListAtT != null) {
+                        for(t, v: node<UE> in ueListAtT) {
+                            newUeListAtT.set(t, v);
+                        }
+                    }
+                    newUeListAtT.set(ue_node->id, ue_node);
+                    nrCellDU.userEquipments.setAt(t, newUeListAtT);
+                }
+
+                //Update signal measures
+                var sincSignalJsonObj = ueJsonObj.get("SynchronizationSignal");
+                var signal = SynchronizationSignal {
+                    sinr : sincSignalJsonObj.get("SINR") as float,
+                    rsrq : sincSignalJsonObj.get("RSRQ") as float,
+                    rsrp : sincSignalJsonObj.get("RSRP") as int,
+                };
+                ue_node->synchronizationSignal.setAt(t, signal);
+            }
+        }
+            
+    }
+    
+}

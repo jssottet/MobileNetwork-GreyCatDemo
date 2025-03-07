@@ -1,0 +1,94 @@
+/*
+* Demo version of the Network including UE, RAN, etc. Some attributes
+are not related to the standard; some type and values are not
+*/
+
+
+//var ran: RAN; //Main entry point to the graph; might not be necessary.
+
+//Index: nRCellId => nrCellCU
+var nrCellCU_by_index: nodeList<node<NrCellCU>>;
+var nrCellCU_by_nRCellId: nodeList<node<NrCellCU>>;
+
+enum CommunicationType {
+    TDD("TDD");
+    FDD("FDD");
+}
+
+abstract type CommunicationTypeUtils {
+    static fn parseCommuncationType(value: String): CommunicationType {
+        if(value == "TDD") {
+            return CommunicationType::TDD;
+        } else if(value == "FDD") {
+            return CommunicationType::FDD;
+        } else {
+            throw "Unknown communcation type: ${value}";
+        }
+    }
+}
+
+/*
+type Ran {
+    nrCellCus: node<NRCellCU>;
+    nrCellDus: node<NRCellDU>;
+}*/
+
+type NrCellCU {
+    nRCellId: int;
+    physicalCellId: int;
+    
+    nrCellDU_by_duId: nodeList<node<NrCellDU>>;
+    nrCellDU_by_index: nodeList<node<NrCellDU>>;
+}
+
+
+
+type NrCellDU {
+    nRCellId: int;
+    physicalCellId: int;
+    nrCellCU: node<NrCellCU>;
+    ssb: SSB;
+    policy : CommunicationType; 
+    tdd: TDD?;
+    bwp : BWP;
+    userEquipments: nodeTime<nodeList<node<UE>>>;
+}
+
+type SSB {
+    arfcn: int;
+}
+
+type TDD {
+    band: int;
+    arfcn: int;
+}
+
+type BWP {
+    subCarrierSpacing : int;
+    numberOfRBs : int;
+}
+
+type UE {
+    // position will be the prepared points on the floor map
+    id : int;
+    rnti : String;
+    pdus: nodeList<PDUSession>;
+    du: node<NrCellDU>;
+    position : int;
+    synchronizationSignal : nodeTime<SynchronizationSignal>;
+}
+
+type SynchronizationSignal {
+    rsrp : int ;
+    rsrq : float;
+    sinr : float;
+}
+
+type PDUSession {
+    id: int;
+    status: PDUSessionStatus;
+}
+
+enum PDUSessionStatus {
+    ESTABLISHED("established");
+}

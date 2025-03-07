@@ -1,13 +1,14 @@
-@include("server/model");
+@include("backend");
 
-use importer;
 use runtime;
 use io;
-use network;
-
+use logs_importer;
 
 fn main() {
-    println("Importing Data ...");
+    info("Importing Data ...");
+
     importData();
+
+    info("Import done. App ready.");
     
 }
