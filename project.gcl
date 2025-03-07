@@ -1,0 +1,13 @@
+@include("server/model");
+
+use importer;
+use runtime;
+use io;
+use network;
+
+
+fn main() {
+    println("Importing Data ...");
+    importData();
+    
+}

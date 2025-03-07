@@ -1,0 +1,715 @@
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+UE 0 CU UE ID 1 DU UE ID 25536 RNTI 63c0 random identity 9ec53899fa000000:
+    last RRC activity: 1 seconds ago
+    (no PDU sessions)
+    associated DU:  (local/integrated CU-DU)
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+UE 0 CU UE ID 1 DU UE ID 25536 RNTI 63c0 random identity 9ec53899fa000000:
+    last RRC activity: 1 seconds ago
+    PDU session 0 ID 1 status established
+    PDU session 1 ID 2 status established
+    associated DU:  (local/integrated CU-DU)
+    servingCellId 0 MeasResultNR for phyCellId 0:
+      resultSSB:RSRP -109 dBm RSRQ -11.0 dB SINR 17.0 dB 
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+UE 0 CU UE ID 1 DU UE ID 25536 RNTI 63c0 random identity 9ec53899fa000000:
+    last RRC activity: 1 seconds ago
+    PDU session 0 ID 1 status established
+    PDU session 1 ID 2 status established
+    associated DU:  (local/integrated CU-DU)
+    servingCellId 0 MeasResultNR for phyCellId 0:
+      resultSSB:RSRP -111 dBm RSRQ -11.0 dB SINR 14.0 dB 
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+UE 0 CU UE ID 1 DU UE ID 25536 RNTI 63c0 random identity 9ec53899fa000000:
+    last RRC activity: 1 seconds ago
+    PDU session 0 ID 1 status established
+    PDU session 1 ID 2 status established
+    associated DU:  (local/integrated CU-DU)
+    servingCellId 0 MeasResultNR for phyCellId 0:
+      resultSSB:RSRP -106 dBm RSRQ -10.5 dB SINR 21.5 dB 
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+UE 0 CU UE ID 1 DU UE ID 25536 RNTI 63c0 random identity 9ec53899fa000000:
+    last RRC activity: 1 seconds ago
+    PDU session 0 ID 1 status established
+    PDU session 1 ID 2 status established
+    associated DU:  (local/integrated CU-DU)
+    servingCellId 0 MeasResultNR for phyCellId 0:
+      resultSSB:RSRP -104 dBm RSRQ -10.5 dB SINR 23.5 dB 
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+UE 0 CU UE ID 1 DU UE ID 25536 RNTI 63c0 random identity 9ec53899fa000000:
+    last RRC activity: 1 seconds ago
+    PDU session 0 ID 1 status established
+    PDU session 1 ID 2 status established
+    associated DU:  (local/integrated CU-DU)
+    servingCellId 0 MeasResultNR for phyCellId 0:
+      resultSSB:RSRP -104 dBm RSRQ -10.5 dB SINR 23.5 dB 
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+UE 0 CU UE ID 1 DU UE ID 25536 RNTI 63c0 random identity 9ec53899fa000000:
+    last RRC activity: 1 seconds ago
+    PDU session 0 ID 1 status established
+    PDU session 1 ID 2 status established
+    associated DU:  (local/integrated CU-DU)
+    servingCellId 0 MeasResultNR for phyCellId 0:
+      resultSSB:RSRP -104 dBm RSRQ -10.5 dB SINR 23.5 dB 
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+UE 0 CU UE ID 1 DU UE ID 25536 RNTI 63c0 random identity 9ec53899fa000000:
+    last RRC activity: 1 seconds ago
+    PDU session 0 ID 1 status established
+    PDU session 1 ID 2 status established
+    associated DU:  (local/integrated CU-DU)
+    servingCellId 0 MeasResultNR for phyCellId 0:
+      resultSSB:RSRP -102 dBm RSRQ -10.5 dB SINR 23.5 dB 
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+UE 0 CU UE ID 1 DU UE ID 25536 RNTI 63c0 random identity 9ec53899fa000000:
+    last RRC activity: 1 seconds ago
+    PDU session 0 ID 1 status established
+    PDU session 1 ID 2 status established
+    associated DU:  (local/integrated CU-DU)
+    servingCellId 0 MeasResultNR for phyCellId 0:
+      resultSSB:RSRP -103 dBm RSRQ -10.5 dB SINR 23.5 dB 
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+UE 0 CU UE ID 1 DU UE ID 25536 RNTI 63c0 random identity 9ec53899fa000000:
+    last RRC activity: 1 seconds ago
+    PDU session 0 ID 1 status established
+    PDU session 1 ID 2 status established
+    associated DU:  (local/integrated CU-DU)
+    servingCellId 0 MeasResultNR for phyCellId 0:
+      resultSSB:RSRP -104 dBm RSRQ -10.5 dB SINR 23.5 dB 
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+UE 0 CU UE ID 1 DU UE ID 25536 RNTI 63c0 random identity 9ec53899fa000000:
+    last RRC activity: 1 seconds ago
+    PDU session 0 ID 1 status established
+    PDU session 1 ID 2 status established
+    associated DU:  (local/integrated CU-DU)
+    servingCellId 0 MeasResultNR for phyCellId 0:
+      resultSSB:RSRP -106 dBm RSRQ -10.5 dB SINR 21.0 dB 
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+UE 0 CU UE ID 1 DU UE ID 25536 RNTI 63c0 random identity 9ec53899fa000000:
+    last RRC activity: 1 seconds ago
+    PDU session 0 ID 1 status established
+    PDU session 1 ID 2 status established
+    associated DU:  (local/integrated CU-DU)
+    servingCellId 0 MeasResultNR for phyCellId 0:
+      resultSSB:RSRP -105 dBm RSRQ -10.5 dB SINR 20.5 dB 
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+UE 0 CU UE ID 1 DU UE ID 25536 RNTI 63c0 random identity 9ec53899fa000000:
+    last RRC activity: 1 seconds ago
+    PDU session 0 ID 1 status established
+    PDU session 1 ID 2 status established
+    associated DU:  (local/integrated CU-DU)
+    servingCellId 0 MeasResultNR for phyCellId 0:
+      resultSSB:RSRP -104 dBm RSRQ -10.5 dB SINR 23.5 dB 
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+UE 0 CU UE ID 1 DU UE ID 25536 RNTI 63c0 random identity 9ec53899fa000000:
+    last RRC activity: 1 seconds ago
+    PDU session 0 ID 1 status established
+    PDU session 1 ID 2 status established
+    associated DU:  (local/integrated CU-DU)
+    servingCellId 0 MeasResultNR for phyCellId 0:
+      resultSSB:RSRP -104 dBm RSRQ -10.5 dB SINR 23.5 dB 
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+UE 0 CU UE ID 1 DU UE ID 25536 RNTI 63c0 random identity 9ec53899fa000000:
+    last RRC activity: 1 seconds ago
+    PDU session 0 ID 1 status established
+    PDU session 1 ID 2 status established
+    associated DU:  (local/integrated CU-DU)
+    servingCellId 0 MeasResultNR for phyCellId 0:
+      resultSSB:RSRP -103 dBm RSRQ -10.5 dB SINR 23.5 dB 
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+UE 0 CU UE ID 1 DU UE ID 25536 RNTI 63c0 random identity 9ec53899fa000000:
+    last RRC activity: 1 seconds ago
+    PDU session 0 ID 1 status established
+    PDU session 1 ID 2 status established
+    associated DU:  (local/integrated CU-DU)
+    servingCellId 0 MeasResultNR for phyCellId 0:
+      resultSSB:RSRP -104 dBm RSRQ -10.5 dB SINR 23.5 dB 
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+UE 0 CU UE ID 1 DU UE ID 25536 RNTI 63c0 random identity 9ec53899fa000000:
+    last RRC activity: 1 seconds ago
+    PDU session 0 ID 1 status established
+    PDU session 1 ID 2 status established
+    associated DU:  (local/integrated CU-DU)
+    servingCellId 0 MeasResultNR for phyCellId 0:
+      resultSSB:RSRP -103 dBm RSRQ -10.5 dB SINR 23.5 dB 
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+UE 0 CU UE ID 1 DU UE ID 25536 RNTI 63c0 random identity 9ec53899fa000000:
+    last RRC activity: 1 seconds ago
+    PDU session 0 ID 1 status established
+    PDU session 1 ID 2 status established
+    associated DU:  (local/integrated CU-DU)
+    servingCellId 0 MeasResultNR for phyCellId 0:
+      resultSSB:RSRP -103 dBm RSRQ -10.5 dB SINR 23.5 dB 
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+UE 0 CU UE ID 1 DU UE ID 25536 RNTI 63c0 random identity 9ec53899fa000000:
+    last RRC activity: 1 seconds ago
+    PDU session 0 ID 1 status established
+    PDU session 1 ID 2 status established
+    associated DU:  (local/integrated CU-DU)
+    servingCellId 0 MeasResultNR for phyCellId 0:
+      resultSSB:RSRP -102 dBm RSRQ -10.5 dB SINR 23.5 dB 
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+UE 0 CU UE ID 1 DU UE ID 25536 RNTI 63c0 random identity 9ec53899fa000000:
+    last RRC activity: 1 seconds ago
+    PDU session 0 ID 1 status established
+    PDU session 1 ID 2 status established
+    associated DU:  (local/integrated CU-DU)
+    servingCellId 0 MeasResultNR for phyCellId 0:
+      resultSSB:RSRP -103 dBm RSRQ -10.5 dB SINR 23.5 dB 
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+UE 0 CU UE ID 1 DU UE ID 25536 RNTI 63c0 random identity 9ec53899fa000000:
+    last RRC activity: 1 seconds ago
+    PDU session 0 ID 1 status established
+    PDU session 1 ID 2 status established
+    associated DU:  (local/integrated CU-DU)
+    servingCellId 0 MeasResultNR for phyCellId 0:
+      resultSSB:RSRP -104 dBm RSRQ -10.5 dB SINR 23.5 dB 
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+UE 0 CU UE ID 1 DU UE ID 25536 RNTI 63c0 random identity 9ec53899fa000000:
+    last RRC activity: 1 seconds ago
+    PDU session 0 ID 1 status established
+    PDU session 1 ID 2 status established
+    associated DU:  (local/integrated CU-DU)
+    servingCellId 0 MeasResultNR for phyCellId 0:
+      resultSSB:RSRP -105 dBm RSRQ -10.5 dB SINR 23.5 dB 
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+UE 0 CU UE ID 1 DU UE ID 25536 RNTI 63c0 random identity 9ec53899fa000000:
+    last RRC activity: 1 seconds ago
+    PDU session 0 ID 1 status established
+    PDU session 1 ID 2 status established
+    associated DU:  (local/integrated CU-DU)
+    servingCellId 0 MeasResultNR for phyCellId 0:
+      resultSSB:RSRP -106 dBm RSRQ -10.5 dB SINR 23.5 dB 
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+UE 0 CU UE ID 1 DU UE ID 25536 RNTI 63c0 random identity 9ec53899fa000000:
+    last RRC activity: 1 seconds ago
+    PDU session 0 ID 1 status established
+    PDU session 1 ID 2 status established
+    associated DU:  (local/integrated CU-DU)
+    servingCellId 0 MeasResultNR for phyCellId 0:
+      resultSSB:RSRP -105 dBm RSRQ -10.5 dB SINR 23.5 dB 
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+UE 0 CU UE ID 1 DU UE ID 25536 RNTI 63c0 random identity 9ec53899fa000000:
+    last RRC activity: 1 seconds ago
+    PDU session 0 ID 1 status established
+    PDU session 1 ID 2 status established
+    associated DU:  (local/integrated CU-DU)
+    servingCellId 0 MeasResultNR for phyCellId 0:
+      resultSSB:RSRP -105 dBm RSRQ -10.5 dB SINR 23.5 dB 
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+UE 0 CU UE ID 1 DU UE ID 25536 RNTI 63c0 random identity 9ec53899fa000000:
+    last RRC activity: 1 seconds ago
+    PDU session 0 ID 1 status established
+    PDU session 1 ID 2 status established
+    associated DU:  (local/integrated CU-DU)
+    servingCellId 0 MeasResultNR for phyCellId 0:
+      resultSSB:RSRP -105 dBm RSRQ -10.5 dB SINR 23.5 dB 
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+UE 0 CU UE ID 1 DU UE ID 25536 RNTI 63c0 random identity 9ec53899fa000000:
+    last RRC activity: 1 seconds ago
+    PDU session 0 ID 1 status established
+    PDU session 1 ID 2 status established
+    associated DU:  (local/integrated CU-DU)
+    servingCellId 0 MeasResultNR for phyCellId 0:
+      resultSSB:RSRP -106 dBm RSRQ -10.5 dB SINR 22.5 dB 
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+UE 0 CU UE ID 1 DU UE ID 25536 RNTI 63c0 random identity 9ec53899fa000000:
+    last RRC activity: 1 seconds ago
+    PDU session 0 ID 1 status established
+    PDU session 1 ID 2 status established
+    associated DU:  (local/integrated CU-DU)
+    servingCellId 0 MeasResultNR for phyCellId 0:
+      resultSSB:RSRP -105 dBm RSRQ -10.5 dB SINR 23.5 dB 
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+UE 0 CU UE ID 1 DU UE ID 25536 RNTI 63c0 random identity 9ec53899fa000000:
+    last RRC activity: 1 seconds ago
+    PDU session 0 ID 1 status established
+    PDU session 1 ID 2 status established
+    associated DU:  (local/integrated CU-DU)
+    servingCellId 0 MeasResultNR for phyCellId 0:
+      resultSSB:RSRP -106 dBm RSRQ -10.5 dB SINR 23.5 dB 
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+UE 0 CU UE ID 1 DU UE ID 25536 RNTI 63c0 random identity 9ec53899fa000000:
+    last RRC activity: 1 seconds ago
+    PDU session 0 ID 1 status established
+    PDU session 1 ID 2 status established
+    associated DU:  (local/integrated CU-DU)
+    servingCellId 0 MeasResultNR for phyCellId 0:
+      resultSSB:RSRP -106 dBm RSRQ -10.5 dB SINR 23.5 dB 
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+UE 0 CU UE ID 1 DU UE ID 25536 RNTI 63c0 random identity 9ec53899fa000000:
+    last RRC activity: 1 seconds ago
+    PDU session 0 ID 1 status established
+    PDU session 1 ID 2 status established
+    associated DU:  (local/integrated CU-DU)
+    servingCellId 0 MeasResultNR for phyCellId 0:
+      resultSSB:RSRP -106 dBm RSRQ -10.5 dB SINR 23.5 dB 
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+UE 0 CU UE ID 1 DU UE ID 25536 RNTI 63c0 random identity 9ec53899fa000000:
+    last RRC activity: 1 seconds ago
+    PDU session 0 ID 1 status established
+    PDU session 1 ID 2 status established
+    associated DU:  (local/integrated CU-DU)
+    servingCellId 0 MeasResultNR for phyCellId 0:
+      resultSSB:RSRP -106 dBm RSRQ -10.5 dB SINR 23.5 dB 
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+UE 0 CU UE ID 1 DU UE ID 25536 RNTI 63c0 random identity 9ec53899fa000000:
+    last RRC activity: 1 seconds ago
+    PDU session 0 ID 1 status established
+    PDU session 1 ID 2 status established
+    associated DU:  (local/integrated CU-DU)
+    servingCellId 0 MeasResultNR for phyCellId 0:
+      resultSSB:RSRP -105 dBm RSRQ -10.5 dB SINR 23.5 dB 
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+UE 0 CU UE ID 1 DU UE ID 25536 RNTI 63c0 random identity 9ec53899fa000000:
+    last RRC activity: 1 seconds ago
+    PDU session 0 ID 1 status established
+    PDU session 1 ID 2 status established
+    associated DU:  (local/integrated CU-DU)
+    servingCellId 0 MeasResultNR for phyCellId 0:
+      resultSSB:RSRP -104 dBm RSRQ -10.5 dB SINR 23.5 dB 
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+UE 0 CU UE ID 1 DU UE ID 25536 RNTI 63c0 random identity 9ec53899fa000000:
+    last RRC activity: 1 seconds ago
+    PDU session 0 ID 1 status established
+    PDU session 1 ID 2 status established
+    associated DU:  (local/integrated CU-DU)
+    servingCellId 0 MeasResultNR for phyCellId 0:
+      resultSSB:RSRP -103 dBm RSRQ -10.5 dB SINR 23.5 dB 
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+UE 0 CU UE ID 1 DU UE ID 25536 RNTI 63c0 random identity 9ec53899fa000000:
+    last RRC activity: 1 seconds ago
+    PDU session 0 ID 1 status established
+    PDU session 1 ID 2 status established
+    associated DU:  (local/integrated CU-DU)
+    servingCellId 0 MeasResultNR for phyCellId 0:
+      resultSSB:RSRP -104 dBm RSRQ -10.5 dB SINR 23.5 dB 
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+UE 0 CU UE ID 1 DU UE ID 25536 RNTI 63c0 random identity 9ec53899fa000000:
+    last RRC activity: 1 seconds ago
+    PDU session 0 ID 1 status established
+    PDU session 1 ID 2 status established
+    associated DU:  (local/integrated CU-DU)
+    servingCellId 0 MeasResultNR for phyCellId 0:
+      resultSSB:RSRP -104 dBm RSRQ -10.5 dB SINR 23.5 dB 
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+UE 0 CU UE ID 1 DU UE ID 25536 RNTI 63c0 random identity 9ec53899fa000000:
+    last RRC activity: 1 seconds ago
+    PDU session 0 ID 1 status established
+    PDU session 1 ID 2 status established
+    associated DU:  (local/integrated CU-DU)
+    servingCellId 0 MeasResultNR for phyCellId 0:
+      resultSSB:RSRP -104 dBm RSRQ -10.5 dB SINR 23.5 dB 
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+UE 0 CU UE ID 1 DU UE ID 25536 RNTI 63c0 random identity 9ec53899fa000000:
+    last RRC activity: 1 seconds ago
+    PDU session 0 ID 1 status established
+    PDU session 1 ID 2 status established
+    associated DU:  (local/integrated CU-DU)
+    servingCellId 0 MeasResultNR for phyCellId 0:
+      resultSSB:RSRP -103 dBm RSRQ -10.5 dB SINR 23.5 dB 
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+UE 0 CU UE ID 1 DU UE ID 25536 RNTI 63c0 random identity 9ec53899fa000000:
+    last RRC activity: 1 seconds ago
+    PDU session 0 ID 1 status established
+    PDU session 1 ID 2 status established
+    associated DU:  (local/integrated CU-DU)
+    servingCellId 0 MeasResultNR for phyCellId 0:
+      resultSSB:RSRP -103 dBm RSRQ -10.5 dB SINR 23.5 dB 
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+UE 0 CU UE ID 1 DU UE ID 25536 RNTI 63c0 random identity 9ec53899fa000000:
+    last RRC activity: 1 seconds ago
+    PDU session 0 ID 1 status established
+    PDU session 1 ID 2 status established
+    associated DU:  (local/integrated CU-DU)
+    servingCellId 0 MeasResultNR for phyCellId 0:
+      resultSSB:RSRP -103 dBm RSRQ -10.5 dB SINR 23.5 dB 
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+UE 0 CU UE ID 1 DU UE ID 25536 RNTI 63c0 random identity 9ec53899fa000000:
+    last RRC activity: 1 seconds ago
+    PDU session 0 ID 1 status established
+    PDU session 1 ID 2 status established
+    associated DU:  (local/integrated CU-DU)
+    servingCellId 0 MeasResultNR for phyCellId 0:
+      resultSSB:RSRP -105 dBm RSRQ -10.5 dB SINR 23.5 dB 
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+UE 0 CU UE ID 1 DU UE ID 25536 RNTI 63c0 random identity 9ec53899fa000000:
+    last RRC activity: 1 seconds ago
+    PDU session 0 ID 1 status established
+    PDU session 1 ID 2 status established
+    associated DU:  (local/integrated CU-DU)
+    servingCellId 0 MeasResultNR for phyCellId 0:
+      resultSSB:RSRP -105 dBm RSRQ -10.5 dB SINR 23.5 dB 
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+UE 0 CU UE ID 1 DU UE ID 25536 RNTI 63c0 random identity 9ec53899fa000000:
+    last RRC activity: 1 seconds ago
+    PDU session 0 ID 1 status established
+    PDU session 1 ID 2 status established
+    associated DU:  (local/integrated CU-DU)
+    servingCellId 0 MeasResultNR for phyCellId 0:
+      resultSSB:RSRP -105 dBm RSRQ -10.5 dB SINR 23.5 dB 
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+UE 0 CU UE ID 1 DU UE ID 25536 RNTI 63c0 random identity 9ec53899fa000000:
+    last RRC activity: 1 seconds ago
+    PDU session 0 ID 1 status established
+    PDU session 1 ID 2 status established
+    associated DU:  (local/integrated CU-DU)
+    servingCellId 0 MeasResultNR for phyCellId 0:
+      resultSSB:RSRP -105 dBm RSRQ -10.5 dB SINR 23.5 dB 
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+UE 0 CU UE ID 1 DU UE ID 25536 RNTI 63c0 random identity 9ec53899fa000000:
+    last RRC activity: 1 seconds ago
+    PDU session 0 ID 1 status established
+    PDU session 1 ID 2 status established
+    associated DU:  (local/integrated CU-DU)
+    servingCellId 0 MeasResultNR for phyCellId 0:
+      resultSSB:RSRP -104 dBm RSRQ -10.5 dB SINR 23.5 dB 
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+UE 0 CU UE ID 1 DU UE ID 25536 RNTI 63c0 random identity 9ec53899fa000000:
+    last RRC activity: 1 seconds ago
+    PDU session 0 ID 1 status established
+    PDU session 1 ID 2 status established
+    associated DU:  (local/integrated CU-DU)
+    servingCellId 0 MeasResultNR for phyCellId 0:
+      resultSSB:RSRP -102 dBm RSRQ -10.5 dB SINR 23.5 dB 
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+UE 0 CU UE ID 1 DU UE ID 25536 RNTI 63c0 random identity 9ec53899fa000000:
+    last RRC activity: 1 seconds ago
+    PDU session 0 ID 1 status established
+    PDU session 1 ID 2 status established
+    associated DU:  (local/integrated CU-DU)
+    servingCellId 0 MeasResultNR for phyCellId 0:
+      resultSSB:RSRP -103 dBm RSRQ -10.5 dB SINR 23.5 dB 
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+UE 0 CU UE ID 1 DU UE ID 25536 RNTI 63c0 random identity 9ec53899fa000000:
+    last RRC activity: 1 seconds ago
+    PDU session 0 ID 1 status established
+    PDU session 1 ID 2 status established
+    associated DU:  (local/integrated CU-DU)
+    servingCellId 0 MeasResultNR for phyCellId 0:
+      resultSSB:RSRP -103 dBm RSRQ -10.5 dB SINR 23.5 dB 
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+UE 0 CU UE ID 1 DU UE ID 25536 RNTI 63c0 random identity 9ec53899fa000000:
+    last RRC activity: 1 seconds ago
+    PDU session 0 ID 1 status established
+    PDU session 1 ID 2 status established
+    associated DU:  (local/integrated CU-DU)
+    servingCellId 0 MeasResultNR for phyCellId 0:
+      resultSSB:RSRP -102 dBm RSRQ -10.5 dB SINR 23.5 dB 
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+UE 0 CU UE ID 1 DU UE ID 25536 RNTI 63c0 random identity 9ec53899fa000000:
+    last RRC activity: 1 seconds ago
+    PDU session 0 ID 1 status established
+    PDU session 1 ID 2 status established
+    associated DU:  (local/integrated CU-DU)
+    servingCellId 0 MeasResultNR for phyCellId 0:
+      resultSSB:RSRP -102 dBm RSRQ -10.5 dB SINR 23.5 dB 
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+UE 0 CU UE ID 1 DU UE ID 25536 RNTI 63c0 random identity 9ec53899fa000000:
+    last RRC activity: 1 seconds ago
+    PDU session 0 ID 1 status established
+    PDU session 1 ID 2 status established
+    associated DU:  (local/integrated CU-DU)
+    servingCellId 0 MeasResultNR for phyCellId 0:
+      resultSSB:RSRP -106 dBm RSRQ -10.5 dB SINR 23.5 dB 
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+UE 0 CU UE ID 1 DU UE ID 25536 RNTI 63c0 random identity 9ec53899fa000000:
+    last RRC activity: 1 seconds ago
+    PDU session 0 ID 1 status established
+    PDU session 1 ID 2 status established
+    associated DU:  (local/integrated CU-DU)
+    servingCellId 0 MeasResultNR for phyCellId 0:
+      resultSSB:RSRP -102 dBm RSRQ -10.5 dB SINR 23.5 dB 
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+UE 0 CU UE ID 1 DU UE ID 25536 RNTI 63c0 random identity 9ec53899fa000000:
+    last RRC activity: 1 seconds ago
+    PDU session 0 ID 1 status established
+    PDU session 1 ID 2 status established
+    associated DU:  (local/integrated CU-DU)
+    servingCellId 0 MeasResultNR for phyCellId 0:
+      resultSSB:RSRP -109 dBm RSRQ -11.0 dB SINR 18.5 dB 
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+UE 0 CU UE ID 1 DU UE ID 25536 RNTI 63c0 random identity 9ec53899fa000000:
+    last RRC activity: 1 seconds ago
+    PDU session 0 ID 1 status established
+    PDU session 1 ID 2 status established
+    associated DU:  (local/integrated CU-DU)
+    servingCellId 0 MeasResultNR for phyCellId 0:
+      resultSSB:RSRP -107 dBm RSRQ -11.0 dB SINR 18.5 dB 
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+UE 0 CU UE ID 1 DU UE ID 25536 RNTI 63c0 random identity 9ec53899fa000000:
+    last RRC activity: 1 seconds ago
+    PDU session 0 ID 0 status released
+    PDU session 1 ID 0 status released
+    associated DU:  (local/integrated CU-DU)
+    servingCellId 0 MeasResultNR for phyCellId 0:
+      resultSSB:RSRP -107 dBm RSRQ -10.5 dB SINR 20.5 dB 
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+UE 0 CU UE ID 1 DU UE ID 25536 RNTI 63c0 random identity 9ec53899fa000000:
+    last RRC activity: 1 seconds ago
+    PDU session 0 ID 0 status released
+    PDU session 1 ID 0 status released
+    associated DU:  (local/integrated CU-DU)
+    servingCellId 0 MeasResultNR for phyCellId 0:
+      resultSSB:RSRP -106 dBm RSRQ -10.5 dB SINR 21.5 dB 
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+UE 0 CU UE ID 1 DU UE ID 25536 RNTI 63c0 random identity 9ec53899fa000000:
+    last RRC activity: 1 seconds ago
+    PDU session 0 ID 0 status released
+    PDU session 1 ID 0 status released
+    associated DU:  (local/integrated CU-DU)
+    servingCellId 0 MeasResultNR for phyCellId 0:
+      resultSSB:RSRP -102 dBm RSRQ -10.5 dB SINR 23.5 dB 
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
+    TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106

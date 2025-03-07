@@ -1,0 +1,2100 @@
+[
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": {
+        "id": 25536,
+        "RNTI": "63c0",
+        "SynchronizationSignal": {
+          "RSRP": -109,
+          "RSRQ": -11,
+          "SINR": 17
+        }
+      },
+      "timestamp": 1
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": {
+        "id": 25536,
+        "RNTI": "63c0",
+        "SynchronizationSignal": {
+          "RSRP": -111,
+          "RSRQ": -11,
+          "SINR": 14
+        }
+      },
+      "timestamp": 2
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": {
+        "id": 25536,
+        "RNTI": "63c0",
+        "SynchronizationSignal": {
+          "RSRP": -106,
+          "RSRQ": -10.5,
+          "SINR": 21.5
+        }
+      },
+      "timestamp": 3
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": {
+        "id": 25536,
+        "RNTI": "63c0",
+        "SynchronizationSignal": {
+          "RSRP": -104,
+          "RSRQ": -10.5,
+          "SINR": 23.5
+        }
+      },
+      "timestamp": 4
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": {
+        "id": 25536,
+        "RNTI": "63c0",
+        "SynchronizationSignal": {
+          "RSRP": -104,
+          "RSRQ": -10.5,
+          "SINR": 23.5
+        }
+      },
+      "timestamp": 5
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": {
+        "id": 25536,
+        "RNTI": "63c0",
+        "SynchronizationSignal": {
+          "RSRP": -104,
+          "RSRQ": -10.5,
+          "SINR": 23.5
+        }
+      },
+      "timestamp": 6
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": {
+        "id": 25536,
+        "RNTI": "63c0",
+        "SynchronizationSignal": {
+          "RSRP": -102,
+          "RSRQ": -10.5,
+          "SINR": 23.5
+        }
+      },
+      "timestamp": 7
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": {
+        "id": 25536,
+        "RNTI": "63c0",
+        "SynchronizationSignal": {
+          "RSRP": -103,
+          "RSRQ": -10.5,
+          "SINR": 23.5
+        }
+      },
+      "timestamp": 8
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": {
+        "id": 25536,
+        "RNTI": "63c0",
+        "SynchronizationSignal": {
+          "RSRP": -104,
+          "RSRQ": -10.5,
+          "SINR": 23.5
+        }
+      },
+      "timestamp": 9
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": {
+        "id": 25536,
+        "RNTI": "63c0",
+        "SynchronizationSignal": {
+          "RSRP": -106,
+          "RSRQ": -10.5,
+          "SINR": 21
+        }
+      },
+      "timestamp": 10
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": {
+        "id": 25536,
+        "RNTI": "63c0",
+        "SynchronizationSignal": {
+          "RSRP": -105,
+          "RSRQ": -10.5,
+          "SINR": 20.5
+        }
+      },
+      "timestamp": 11
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": {
+        "id": 25536,
+        "RNTI": "63c0",
+        "SynchronizationSignal": {
+          "RSRP": -104,
+          "RSRQ": -10.5,
+          "SINR": 23.5
+        }
+      },
+      "timestamp": 12
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": {
+        "id": 25536,
+        "RNTI": "63c0",
+        "SynchronizationSignal": {
+          "RSRP": -104,
+          "RSRQ": -10.5,
+          "SINR": 23.5
+        }
+      },
+      "timestamp": 13
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": {
+        "id": 25536,
+        "RNTI": "63c0",
+        "SynchronizationSignal": {
+          "RSRP": -103,
+          "RSRQ": -10.5,
+          "SINR": 23.5
+        }
+      },
+      "timestamp": 14
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": {
+        "id": 25536,
+        "RNTI": "63c0",
+        "SynchronizationSignal": {
+          "RSRP": -104,
+          "RSRQ": -10.5,
+          "SINR": 23.5
+        }
+      },
+      "timestamp": 15
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": {
+        "id": 25536,
+        "RNTI": "63c0",
+        "SynchronizationSignal": {
+          "RSRP": -103,
+          "RSRQ": -10.5,
+          "SINR": 23.5
+        }
+      },
+      "timestamp": 16
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": {
+        "id": 25536,
+        "RNTI": "63c0",
+        "SynchronizationSignal": {
+          "RSRP": -103,
+          "RSRQ": -10.5,
+          "SINR": 23.5
+        }
+      },
+      "timestamp": 17
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": {
+        "id": 25536,
+        "RNTI": "63c0",
+        "SynchronizationSignal": {
+          "RSRP": -102,
+          "RSRQ": -10.5,
+          "SINR": 23.5
+        }
+      },
+      "timestamp": 18
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": {
+        "id": 25536,
+        "RNTI": "63c0",
+        "SynchronizationSignal": {
+          "RSRP": -103,
+          "RSRQ": -10.5,
+          "SINR": 23.5
+        }
+      },
+      "timestamp": 19
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": {
+        "id": 25536,
+        "RNTI": "63c0",
+        "SynchronizationSignal": {
+          "RSRP": -104,
+          "RSRQ": -10.5,
+          "SINR": 23.5
+        }
+      },
+      "timestamp": 20
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": {
+        "id": 25536,
+        "RNTI": "63c0",
+        "SynchronizationSignal": {
+          "RSRP": -105,
+          "RSRQ": -10.5,
+          "SINR": 23.5
+        }
+      },
+      "timestamp": 21
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": {
+        "id": 25536,
+        "RNTI": "63c0",
+        "SynchronizationSignal": {
+          "RSRP": -106,
+          "RSRQ": -10.5,
+          "SINR": 23.5
+        }
+      },
+      "timestamp": 22
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": {
+        "id": 25536,
+        "RNTI": "63c0",
+        "SynchronizationSignal": {
+          "RSRP": -105,
+          "RSRQ": -10.5,
+          "SINR": 23.5
+        }
+      },
+      "timestamp": 23
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": {
+        "id": 25536,
+        "RNTI": "63c0",
+        "SynchronizationSignal": {
+          "RSRP": -105,
+          "RSRQ": -10.5,
+          "SINR": 23.5
+        }
+      },
+      "timestamp": 24
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": {
+        "id": 25536,
+        "RNTI": "63c0",
+        "SynchronizationSignal": {
+          "RSRP": -105,
+          "RSRQ": -10.5,
+          "SINR": 23.5
+        }
+      },
+      "timestamp": 25
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": {
+        "id": 25536,
+        "RNTI": "63c0",
+        "SynchronizationSignal": {
+          "RSRP": -106,
+          "RSRQ": -10.5,
+          "SINR": 22.5
+        }
+      },
+      "timestamp": 26
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": {
+        "id": 25536,
+        "RNTI": "63c0",
+        "SynchronizationSignal": {
+          "RSRP": -105,
+          "RSRQ": -10.5,
+          "SINR": 23.5
+        }
+      },
+      "timestamp": 27
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": {
+        "id": 25536,
+        "RNTI": "63c0",
+        "SynchronizationSignal": {
+          "RSRP": -106,
+          "RSRQ": -10.5,
+          "SINR": 23.5
+        }
+      },
+      "timestamp": 28
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": {
+        "id": 25536,
+        "RNTI": "63c0",
+        "SynchronizationSignal": {
+          "RSRP": -106,
+          "RSRQ": -10.5,
+          "SINR": 23.5
+        }
+      },
+      "timestamp": 29
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": {
+        "id": 25536,
+        "RNTI": "63c0",
+        "SynchronizationSignal": {
+          "RSRP": -106,
+          "RSRQ": -10.5,
+          "SINR": 23.5
+        }
+      },
+      "timestamp": 30
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": {
+        "id": 25536,
+        "RNTI": "63c0",
+        "SynchronizationSignal": {
+          "RSRP": -106,
+          "RSRQ": -10.5,
+          "SINR": 23.5
+        }
+      },
+      "timestamp": 31
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": {
+        "id": 25536,
+        "RNTI": "63c0",
+        "SynchronizationSignal": {
+          "RSRP": -105,
+          "RSRQ": -10.5,
+          "SINR": 23.5
+        }
+      },
+      "timestamp": 32
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": {
+        "id": 25536,
+        "RNTI": "63c0",
+        "SynchronizationSignal": {
+          "RSRP": -104,
+          "RSRQ": -10.5,
+          "SINR": 23.5
+        }
+      },
+      "timestamp": 33
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": {
+        "id": 25536,
+        "RNTI": "63c0",
+        "SynchronizationSignal": {
+          "RSRP": -103,
+          "RSRQ": -10.5,
+          "SINR": 23.5
+        }
+      },
+      "timestamp": 34
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": {
+        "id": 25536,
+        "RNTI": "63c0",
+        "SynchronizationSignal": {
+          "RSRP": -104,
+          "RSRQ": -10.5,
+          "SINR": 23.5
+        }
+      },
+      "timestamp": 35
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": {
+        "id": 25536,
+        "RNTI": "63c0",
+        "SynchronizationSignal": {
+          "RSRP": -104,
+          "RSRQ": -10.5,
+          "SINR": 23.5
+        }
+      },
+      "timestamp": 36
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": {
+        "id": 25536,
+        "RNTI": "63c0",
+        "SynchronizationSignal": {
+          "RSRP": -104,
+          "RSRQ": -10.5,
+          "SINR": 23.5
+        }
+      },
+      "timestamp": 37
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": {
+        "id": 25536,
+        "RNTI": "63c0",
+        "SynchronizationSignal": {
+          "RSRP": -103,
+          "RSRQ": -10.5,
+          "SINR": 23.5
+        }
+      },
+      "timestamp": 38
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": {
+        "id": 25536,
+        "RNTI": "63c0",
+        "SynchronizationSignal": {
+          "RSRP": -103,
+          "RSRQ": -10.5,
+          "SINR": 23.5
+        }
+      },
+      "timestamp": 39
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": {
+        "id": 25536,
+        "RNTI": "63c0",
+        "SynchronizationSignal": {
+          "RSRP": -103,
+          "RSRQ": -10.5,
+          "SINR": 23.5
+        }
+      },
+      "timestamp": 40
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": {
+        "id": 25536,
+        "RNTI": "63c0",
+        "SynchronizationSignal": {
+          "RSRP": -105,
+          "RSRQ": -10.5,
+          "SINR": 23.5
+        }
+      },
+      "timestamp": 41
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": {
+        "id": 25536,
+        "RNTI": "63c0",
+        "SynchronizationSignal": {
+          "RSRP": -105,
+          "RSRQ": -10.5,
+          "SINR": 23.5
+        }
+      },
+      "timestamp": 42
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": {
+        "id": 25536,
+        "RNTI": "63c0",
+        "SynchronizationSignal": {
+          "RSRP": -105,
+          "RSRQ": -10.5,
+          "SINR": 23.5
+        }
+      },
+      "timestamp": 43
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": {
+        "id": 25536,
+        "RNTI": "63c0",
+        "SynchronizationSignal": {
+          "RSRP": -105,
+          "RSRQ": -10.5,
+          "SINR": 23.5
+        }
+      },
+      "timestamp": 44
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": {
+        "id": 25536,
+        "RNTI": "63c0",
+        "SynchronizationSignal": {
+          "RSRP": -104,
+          "RSRQ": -10.5,
+          "SINR": 23.5
+        }
+      },
+      "timestamp": 45
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": {
+        "id": 25536,
+        "RNTI": "63c0",
+        "SynchronizationSignal": {
+          "RSRP": -102,
+          "RSRQ": -10.5,
+          "SINR": 23.5
+        }
+      },
+      "timestamp": 46
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": {
+        "id": 25536,
+        "RNTI": "63c0",
+        "SynchronizationSignal": {
+          "RSRP": -103,
+          "RSRQ": -10.5,
+          "SINR": 23.5
+        }
+      },
+      "timestamp": 47
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": {
+        "id": 25536,
+        "RNTI": "63c0",
+        "SynchronizationSignal": {
+          "RSRP": -103,
+          "RSRQ": -10.5,
+          "SINR": 23.5
+        }
+      },
+      "timestamp": 48
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": {
+        "id": 25536,
+        "RNTI": "63c0",
+        "SynchronizationSignal": {
+          "RSRP": -102,
+          "RSRQ": -10.5,
+          "SINR": 23.5
+        }
+      },
+      "timestamp": 49
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": {
+        "id": 25536,
+        "RNTI": "63c0",
+        "SynchronizationSignal": {
+          "RSRP": -102,
+          "RSRQ": -10.5,
+          "SINR": 23.5
+        }
+      },
+      "timestamp": 50
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": {
+        "id": 25536,
+        "RNTI": "63c0",
+        "SynchronizationSignal": {
+          "RSRP": -106,
+          "RSRQ": -10.5,
+          "SINR": 23.5
+        }
+      },
+      "timestamp": 51
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": {
+        "id": 25536,
+        "RNTI": "63c0",
+        "SynchronizationSignal": {
+          "RSRP": -102,
+          "RSRQ": -10.5,
+          "SINR": 23.5
+        }
+      },
+      "timestamp": 52
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": {
+        "id": 25536,
+        "RNTI": "63c0",
+        "SynchronizationSignal": {
+          "RSRP": -109,
+          "RSRQ": -11,
+          "SINR": 18.5
+        }
+      },
+      "timestamp": 53
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": {
+        "id": 25536,
+        "RNTI": "63c0",
+        "SynchronizationSignal": {
+          "RSRP": -107,
+          "RSRQ": -11,
+          "SINR": 18.5
+        }
+      },
+      "timestamp": 54
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": {
+        "id": 25536,
+        "RNTI": "63c0",
+        "SynchronizationSignal": {
+          "RSRP": -107,
+          "RSRQ": -10.5,
+          "SINR": 20.5
+        }
+      },
+      "timestamp": 55
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": {
+        "id": 25536,
+        "RNTI": "63c0",
+        "SynchronizationSignal": {
+          "RSRP": -106,
+          "RSRQ": -10.5,
+          "SINR": 21.5
+        }
+      },
+      "timestamp": 56
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": {
+        "id": 25536,
+        "RNTI": "63c0",
+        "SynchronizationSignal": {
+          "RSRP": -102,
+          "RSRQ": -10.5,
+          "SINR": 23.5
+        }
+      },
+      "timestamp": 57
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": {
+        "id": 25536,
+        "RNTI": "63c0",
+        "SynchronizationSignal": null
+      },
+      "timestamp": 58
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": null,
+      "timestamp": 59
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": null,
+      "timestamp": 60
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": null,
+      "timestamp": 61
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": null,
+      "timestamp": 62
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": null,
+      "timestamp": 63
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": null,
+      "timestamp": 64
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": null,
+      "timestamp": 65
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": null,
+      "timestamp": 66
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": null,
+      "timestamp": 67
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": null,
+      "timestamp": 68
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": null,
+      "timestamp": 69
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": null,
+      "timestamp": 70
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": null,
+      "timestamp": 71
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": null,
+      "timestamp": 72
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": null,
+      "timestamp": 73
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": null,
+      "timestamp": 74
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": null,
+      "timestamp": 75
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": null,
+      "timestamp": 76
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": null,
+      "timestamp": 77
+    }
+  },
+  {
+    "RAN": {
+      "NrCellDU": {
+        "NrCellDuId": 3584,
+        "PIC": 0,
+        "SSB": 653952,
+        "Policy": "TDD",
+        "band": 77,
+        "SSB2": 653424,
+        "BWP": {
+          "SCS": 30,
+          "PRB": 106
+        }
+      },
+      "NrCellCU": {
+        "nrCellID": 12345678
+      },
+      "UE": null,
+      "timestamp": 78
+    }
+  }
+]

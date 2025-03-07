@@ -1,0 +1,54 @@
+/*
+* Demo version of the Network including UE, RAN, etc. Some attributes
+are not related to the standard; some type and values are not
+*/
+
+type Ran {
+ nrCellCus: node<NRCellCU>;
+ nrCellDus: node<NRCellDU>;
+}
+
+type NRCellCU {
+ CellLocalId : int;
+}
+
+enum communicationType {
+    TDD("TDD");
+    FDD("FDD");
+}
+
+type NRCellDU {
+
+ //nrCellDuId : int;   
+ nrRPCI : int;
+ ssbFrequency : int;
+
+ // Will be the same value for the demo
+ arfcnDL : int;
+ arfcnUL : int;
+
+ band : int; //should be BWPRef?
+ // Attribute not present in the reference document but should
+ // available.
+ policy : communicationType; 
+ BWP : node<BWP>;
+}
+
+type BWP {
+ subCarrierSpacing : int; //unit KhZ always?
+ numberOfRBs : int;
+}
+
+type UE {
+ // position will be the prepared points on the floor map
+ id : int;
+ RNTI : String;   
+ position : int; 
+ synchronizationSignal : node<SynchronizationSignal>;
+}
+
+type SynchronizationSignal {
+ RSRP : int ;
+ RSRQ : float;
+ SINR : float;
+}
