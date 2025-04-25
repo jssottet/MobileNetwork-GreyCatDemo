@@ -5,7 +5,7 @@ function parseNrCellDu(inputText,locationIndex) {
     const duMatches = [...inputText.matchAll(/DU ID (\d+)/g)];
     const cellMatches = [...inputText.matchAll(/nrCellID (\d+), PCI (\d+), SSB ARFCN (\d+)/g)];
     const tddMatches = [...inputText.matchAll(/TDD: band (\d+) ARFCN (\d+) SCS (\d+) \(kHz\) PRB (\d+)/g)];
-    const ueMatches = [...inputText.matchAll(/DU UE ID (\d+) RNTI ([0-9a-fA-F]+)/g)];
+    const ueMatches = [...inputText.matchAll(/DU UE ID (\d+) RNTI ([0-9a-fA-F]+) Pos (\d+)/g)];
     const syncSignalMatches = [...inputText.matchAll(/resultSSB:RSRP (-?\d+) dBm RSRQ (-?\d+\.\d+) dB SINR (-?\d+\.\d+)/g)];
     
     let results = [];
@@ -35,6 +35,7 @@ function parseNrCellDu(inputText,locationIndex) {
                 "UE": ueMatch.length > 0 ? {
                     "id": parseInt(ueMatch[1], 10),
                     "RNTI": ueMatch[2],
+                    "Position": ueMatch[3],
                     "SynchronizationSignal": syncMatch.length > 0 ? {
                         "RSRP": parseInt(syncMatch[1], 10),
                         "RSRQ": parseFloat(syncMatch[2]),
@@ -50,15 +51,15 @@ function parseNrCellDu(inputText,locationIndex) {
     const jsonString = JSON.stringify(results, null, 2);
     //console.log(jsonString);
     var filename = locationIndex.toString()+'_output.json';
-    fsg.writeFileSync('server/networkdatafiles/conversion/'+filename, jsonString, 'utf8');
+    fsg.writeFileSync('data/json/'+filename, jsonString, 'utf8');
 }
 
 
 async function readFiles() {
-    for (let i = 1; i <= 12; i++) {
+    for (let i = 1; i <= 7; i++) {
         let filename = i.toString() + '.log';
         console.log(filename);
-        const filePath = 'server/networkdatafiles/' + filename; // Change this to the actual file path
+        const filePath = 'data/logs/' + filename; // Change this to the actual file path
         try {
             const data = await fs.readFile(filePath, 'utf8');
             console.log('Generating for :', filename);

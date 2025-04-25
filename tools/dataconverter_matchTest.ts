@@ -4,7 +4,7 @@ function parseNrCellDu(inputText) {
     const duMatches = [...inputText.matchAll(/DU ID (\d+)/g)];
     const cellMatches = [...inputText.matchAll(/nrCellID (\d+), PCI (\d+), SSB ARFCN (\d+)/g)];
     const tddMatches = [...inputText.matchAll(/TDD: band (\d+) ARFCN (\d+) SCS (\d+) \(kHz\) PRB (\d+)/g)];
-    const ueMatches = [...inputText.matchAll(/DU UE ID (\d+) RNTI ([0-9a-fA-F]+)/g)];
+    const ueMatches = [...inputText.matchAll(/DU UE ID (\d+) RNTI ([0-9a-fA-F]+) Pos (\d+)/g)];
     const syncSignalMatches = [...inputText.matchAll(/resultSSB:RSRP (-?\d+) dBm RSRQ (-?\d+\.\d+) dB SINR (-?\d+\.\d+)/g)];
     
     let results = [];
@@ -34,6 +34,7 @@ function parseNrCellDu(inputText) {
                 "UE": ueMatch.length > 0 ? {
                     "id": parseInt(ueMatch[1], 10),
                     "RNTI": ueMatch[2],
+                    "Position": parseInt(ueMatch[3],10),
                     "SynchronizationSignal": syncMatch.length > 0 ? {
                         "RSRP": parseInt(syncMatch[1], 10),
                         "RSRQ": parseFloat(syncMatch[2]),
@@ -48,15 +49,14 @@ function parseNrCellDu(inputText) {
     
     const jsonString = JSON.stringify(results, null, 2);
     console.log(jsonString);
-    
-    fs.writeFileSync('server/networkdatafiles/conversion/test.json', jsonString, 'utf8');
+    fs.writeFileSync('data/json/testF.json', jsonString, 'utf8');
 }
 
 // Example usage
 const inputText = `1 connected DUs 
 [1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
     TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
-UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
+UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 Pos 1 random identity 2a1acff161000000:
     last RRC activity: 1 seconds ago
     PDU session 0 ID 1 status established
     PDU session 1 ID 2 status established
@@ -67,7 +67,7 @@ UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
 1 connected DUs 
 [1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
     TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
-UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
+UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 Pos 1 random identity 2a1acff161000000:
     last RRC activity: 1 seconds ago
     PDU session 0 ID 1 status established
     PDU session 1 ID 2 status established
@@ -78,7 +78,7 @@ UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
 1 connected DUs 
 [1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
     TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
-UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
+UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 Pos 1 random identity 2a1acff161000000:
     last RRC activity: 1 seconds ago
     PDU session 0 ID 1 status established
     PDU session 1 ID 2 status established
@@ -89,7 +89,7 @@ UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
 1 connected DUs 
 [1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
     TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
-UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
+UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 Pos 1 random identity 2a1acff161000000:
     last RRC activity: 1 seconds ago
     PDU session 0 ID 1 status established
     PDU session 1 ID 2 status established
@@ -100,7 +100,7 @@ UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
 1 connected DUs 
 [1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
     TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
-UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
+UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 Pos 1 random identity 2a1acff161000000:
     last RRC activity: 1 seconds ago
     PDU session 0 ID 1 status established
     PDU session 1 ID 2 status established
@@ -111,7 +111,7 @@ UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
 1 connected DUs 
 [1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
     TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
-UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
+UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 Pos 1 random identity 2a1acff161000000:
     last RRC activity: 1 seconds ago
     PDU session 0 ID 1 status established
     PDU session 1 ID 2 status established
@@ -122,7 +122,7 @@ UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
 1 connected DUs 
 [1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
     TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
-UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
+UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 Pos 1 random identity 2a1acff161000000:
     last RRC activity: 1 seconds ago
     PDU session 0 ID 1 status established
     PDU session 1 ID 2 status established
@@ -133,7 +133,7 @@ UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
 1 connected DUs 
 [1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
     TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
-UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
+UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 Pos 1 random identity 2a1acff161000000:
     last RRC activity: 1 seconds ago
     PDU session 0 ID 1 status established
     PDU session 1 ID 2 status established
@@ -144,7 +144,7 @@ UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
 1 connected DUs 
 [1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
     TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
-UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
+UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 Pos 1 random identity 2a1acff161000000:
     last RRC activity: 1 seconds ago
     PDU session 0 ID 1 status established
     PDU session 1 ID 2 status established
@@ -155,7 +155,7 @@ UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
 1 connected DUs 
 [1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
     TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
-UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
+UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 Pos 1 random identity 2a1acff161000000:
     last RRC activity: 1 seconds ago
     PDU session 0 ID 1 status established
     PDU session 1 ID 2 status established
@@ -166,7 +166,7 @@ UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
 1 connected DUs 
 [1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
     TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
-UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
+UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 Pos 1 random identity 2a1acff161000000:
     last RRC activity: 1 seconds ago
     PDU session 0 ID 1 status established
     PDU session 1 ID 2 status established
@@ -177,7 +177,7 @@ UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
 1 connected DUs 
 [1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
     TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
-UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
+UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 Pos 1 random identity 2a1acff161000000:
     last RRC activity: 1 seconds ago
     PDU session 0 ID 1 status established
     PDU session 1 ID 2 status established
@@ -188,7 +188,7 @@ UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
 1 connected DUs 
 [1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
     TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
-UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
+UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 Pos 1 random identity 2a1acff161000000:
     last RRC activity: 1 seconds ago
     PDU session 0 ID 1 status established
     PDU session 1 ID 2 status established
@@ -199,7 +199,7 @@ UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
 1 connected DUs 
 [1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
     TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
-UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
+UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 Pos 1 random identity 2a1acff161000000:
     last RRC activity: 1 seconds ago
     PDU session 0 ID 1 status established
     PDU session 1 ID 2 status established
@@ -210,7 +210,7 @@ UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
 1 connected DUs 
 [1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
     TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
-UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
+UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 Pos 1 random identity 2a1acff161000000:
     last RRC activity: 1 seconds ago
     PDU session 0 ID 1 status established
     PDU session 1 ID 2 status established
@@ -221,7 +221,7 @@ UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
 1 connected DUs 
 [1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
     TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
-UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
+UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 Pos 1 random identity 2a1acff161000000:
     last RRC activity: 1 seconds ago
     PDU session 0 ID 1 status established
     PDU session 1 ID 2 status established
@@ -232,7 +232,7 @@ UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
 1 connected DUs 
 [1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
     TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
-UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
+UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 Pos 1 random identity 2a1acff161000000:
     last RRC activity: 1 seconds ago
     PDU session 0 ID 1 status established
     PDU session 1 ID 2 status established
@@ -243,7 +243,7 @@ UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
 1 connected DUs 
 [1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
     TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
-UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
+UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 Pos 1 random identity 2a1acff161000000:
     last RRC activity: 1 seconds ago
     PDU session 0 ID 1 status established
     PDU session 1 ID 2 status established
@@ -254,7 +254,7 @@ UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
 1 connected DUs 
 [1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
     TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
-UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
+UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 Pos 1 random identity 2a1acff161000000:
     last RRC activity: 1 seconds ago
     PDU session 0 ID 1 status established
     PDU session 1 ID 2 status established
@@ -265,7 +265,7 @@ UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
 1 connected DUs 
 [1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
     TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
-UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
+UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 Pos 1 random identity 2a1acff161000000:
     last RRC activity: 1 seconds ago
     PDU session 0 ID 1 status established
     PDU session 1 ID 2 status established
@@ -276,7 +276,7 @@ UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
 1 connected DUs 
 [1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
     TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
-UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
+UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 Pos 1 random identity 2a1acff161000000:
     last RRC activity: 1 seconds ago
     PDU session 0 ID 1 status established
     PDU session 1 ID 2 status established
@@ -287,7 +287,7 @@ UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
 1 connected DUs 
 [1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
     TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
-UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
+UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 Pos 1 random identity 2a1acff161000000:
     last RRC activity: 1 seconds ago
     PDU session 0 ID 1 status established
     PDU session 1 ID 2 status established
@@ -298,7 +298,7 @@ UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
 1 connected DUs 
 [1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
     TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
-UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
+UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 Pos 1 random identity 2a1acff161000000:
     last RRC activity: 1 seconds ago
     PDU session 0 ID 1 status established
     PDU session 1 ID 2 status established
@@ -309,7 +309,7 @@ UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
 1 connected DUs 
 [1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
     TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
-UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
+UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 Pos 1 random identity 2a1acff161000000:
     last RRC activity: 1 seconds ago
     PDU session 0 ID 1 status established
     PDU session 1 ID 2 status established
@@ -320,7 +320,7 @@ UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
 1 connected DUs 
 [1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
     TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
-UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
+UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 Pos 1 random identity 2a1acff161000000:
     last RRC activity: 1 seconds ago
     PDU session 0 ID 1 status established
     PDU session 1 ID 2 status established
@@ -331,7 +331,7 @@ UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
 1 connected DUs 
 [1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
     TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
-UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
+UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 Pos 1 random identity 2a1acff161000000:
     last RRC activity: 1 seconds ago
     PDU session 0 ID 1 status established
     PDU session 1 ID 2 status established
@@ -342,7 +342,7 @@ UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
 1 connected DUs 
 [1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
     TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
-UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
+UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 Pos 1 random identity 2a1acff161000000:
     last RRC activity: 1 seconds ago
     PDU session 0 ID 1 status established
     PDU session 1 ID 2 status established
@@ -353,7 +353,7 @@ UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
 1 connected DUs 
 [1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
     TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
-UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
+UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 Pos 1 random identity 2a1acff161000000:
     last RRC activity: 1 seconds ago
     PDU session 0 ID 1 status established
     PDU session 1 ID 2 status established
@@ -364,7 +364,7 @@ UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
 1 connected DUs 
 [1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
     TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
-UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
+UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 Pos 1 random identity 2a1acff161000000:
     last RRC activity: 1 seconds ago
     PDU session 0 ID 1 status established
     PDU session 1 ID 2 status established
@@ -375,7 +375,7 @@ UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
 1 connected DUs 
 [1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
     TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
-UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
+UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 Pos 1 random identity 2a1acff161000000:
     last RRC activity: 1 seconds ago
     PDU session 0 ID 1 status established
     PDU session 1 ID 2 status established
@@ -386,7 +386,7 @@ UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
 1 connected DUs 
 [1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
     TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
-UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
+UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 Pos 1 random identity 2a1acff161000000:
     last RRC activity: 1 seconds ago
     PDU session 0 ID 1 status established
     PDU session 1 ID 2 status established
@@ -397,7 +397,7 @@ UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
 1 connected DUs 
 [1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
     TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
-UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
+UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 Pos 1 random identity 2a1acff161000000:
     last RRC activity: 1 seconds ago
     PDU session 0 ID 1 status established
     PDU session 1 ID 2 status established
@@ -408,7 +408,7 @@ UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
 1 connected DUs 
 [1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
     TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
-UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
+UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 Pos 1 random identity 2a1acff161000000:
     last RRC activity: 1 seconds ago
     PDU session 0 ID 1 status established
     PDU session 1 ID 2 status established
@@ -419,7 +419,7 @@ UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
 1 connected DUs 
 [1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
     TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
-UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
+UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 Pos 1 random identity 2a1acff161000000:
     last RRC activity: 1 seconds ago
     PDU session 0 ID 1 status established
     PDU session 1 ID 2 status established
@@ -430,7 +430,7 @@ UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
 1 connected DUs 
 [1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
     TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
-UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
+UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 Pos 1 random identity 2a1acff161000000:
     last RRC activity: 1 seconds ago
     PDU session 0 ID 1 status established
     PDU session 1 ID 2 status established
@@ -441,7 +441,7 @@ UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
 1 connected DUs 
 [1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
     TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
-UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
+UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 Pos 1 random identity 2a1acff161000000:
     last RRC activity: 1 seconds ago
     PDU session 0 ID 1 status established
     PDU session 1 ID 2 status established
@@ -452,7 +452,7 @@ UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
 1 connected DUs 
 [1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
     TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
-UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
+UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 Pos 1 random identity 2a1acff161000000:
     last RRC activity: 1 seconds ago
     PDU session 0 ID 1 status established
     PDU session 1 ID 2 status established
@@ -463,7 +463,7 @@ UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
 1 connected DUs 
 [1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
     TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
-UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
+UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 Pos 1 random identity 2a1acff161000000:
     last RRC activity: 1 seconds ago
     PDU session 0 ID 1 status established
     PDU session 1 ID 2 status established
@@ -474,7 +474,7 @@ UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
 1 connected DUs 
 [1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
     TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
-UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
+UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 Pos 1 random identity 2a1acff161000000:
     last RRC activity: 1 seconds ago
     PDU session 0 ID 1 status established
     PDU session 1 ID 2 status established
@@ -485,7 +485,7 @@ UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
 1 connected DUs 
 [1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
     TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
-UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
+UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 Pos 1 random identity 2a1acff161000000:
     last RRC activity: 1 seconds ago
     PDU session 0 ID 1 status established
     PDU session 1 ID 2 status established
@@ -496,7 +496,7 @@ UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
 1 connected DUs 
 [1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
     TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
-UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
+UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 Pos 1 random identity 2a1acff161000000:
     last RRC activity: 1 seconds ago
     PDU session 0 ID 1 status established
     PDU session 1 ID 2 status established
@@ -507,7 +507,7 @@ UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
 1 connected DUs 
 [1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
     TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
-UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
+UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 Pos 1 random identity 2a1acff161000000:
     last RRC activity: 1 seconds ago
     PDU session 0 ID 1 status established
     PDU session 1 ID 2 status established
@@ -518,7 +518,7 @@ UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
 1 connected DUs 
 [1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
     TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
-UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
+UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 Pos 1 random identity 2a1acff161000000:
     last RRC activity: 1 seconds ago
     PDU session 0 ID 1 status established
     PDU session 1 ID 2 status established
@@ -529,7 +529,7 @@ UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
 1 connected DUs 
 [1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
     TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
-UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
+UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 Pos 1 random identity 2a1acff161000000:
     last RRC activity: 1 seconds ago
     PDU session 0 ID 1 status established
     PDU session 1 ID 2 status established
@@ -540,7 +540,7 @@ UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
 1 connected DUs 
 [1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
     TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
-UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
+UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 Pos 1 random identity 2a1acff161000000:
     last RRC activity: 1 seconds ago
     PDU session 0 ID 1 status established
     PDU session 1 ID 2 status established
@@ -551,7 +551,7 @@ UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
 1 connected DUs 
 [1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
     TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
-UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
+UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 Pos 1 random identity 2a1acff161000000:
     last RRC activity: 1 seconds ago
     PDU session 0 ID 1 status established
     PDU session 1 ID 2 status established
@@ -562,7 +562,7 @@ UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
 1 connected DUs 
 [1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
     TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
-UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
+UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 Pos 1 random identity 2a1acff161000000:
     last RRC activity: 1 seconds ago
     PDU session 0 ID 1 status established
     PDU session 1 ID 2 status established
@@ -573,7 +573,7 @@ UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
 1 connected DUs 
 [1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
     TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
-UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
+UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 Pos 1 random identity 2a1acff161000000:
     last RRC activity: 1 seconds ago
     PDU session 0 ID 1 status established
     PDU session 1 ID 2 status established
@@ -584,7 +584,7 @@ UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
 1 connected DUs 
 [1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
     TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
-UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
+UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 Pos 1 random identity 2a1acff161000000:
     last RRC activity: 1 seconds ago
     PDU session 0 ID 1 status established
     PDU session 1 ID 2 status established
@@ -595,7 +595,7 @@ UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
 1 connected DUs 
 [1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
     TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
-UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
+UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 Pos 1 random identity 2a1acff161000000:
     last RRC activity: 1 seconds ago
     PDU session 0 ID 1 status established
     PDU session 1 ID 2 status established
@@ -606,7 +606,7 @@ UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
 1 connected DUs 
 [1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
     TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
-UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
+UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 Pos 1 random identity 2a1acff161000000:
     last RRC activity: 1 seconds ago
     PDU session 0 ID 1 status established
     PDU session 1 ID 2 status established
@@ -617,7 +617,7 @@ UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
 1 connected DUs 
 [1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
     TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
-UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
+UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 Pos 1 random identity 2a1acff161000000:
     last RRC activity: 1 seconds ago
     PDU session 0 ID 1 status established
     PDU session 1 ID 2 status established
@@ -628,7 +628,7 @@ UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
 1 connected DUs 
 [1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
     TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
-UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
+UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 Pos 1 random identity 2a1acff161000000:
     last RRC activity: 1 seconds ago
     PDU session 0 ID 1 status established
     PDU session 1 ID 2 status established
@@ -639,7 +639,7 @@ UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
 1 connected DUs 
 [1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
     TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
-UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
+UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 Pos 1 random identity 2a1acff161000000:
     last RRC activity: 1 seconds ago
     PDU session 0 ID 1 status established
     PDU session 1 ID 2 status established
@@ -650,7 +650,7 @@ UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
 1 connected DUs 
 [1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
     TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
-UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
+UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 Pos 1 random identity 2a1acff161000000:
     last RRC activity: 1 seconds ago
     PDU session 0 ID 1 status established
     PDU session 1 ID 2 status established
@@ -661,7 +661,7 @@ UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
 1 connected DUs 
 [1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
     TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
-UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
+UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 Pos 1 random identity 2a1acff161000000:
     last RRC activity: 1 seconds ago
     PDU session 0 ID 0 status released
     PDU session 1 ID 2 status established
@@ -672,7 +672,7 @@ UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
 1 connected DUs 
 [1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
     TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
-UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
+UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 Pos 1 random identity 2a1acff161000000:
     last RRC activity: 1 seconds ago
     PDU session 0 ID 0 status released
     PDU session 1 ID 0 status released
@@ -683,7 +683,7 @@ UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
 1 connected DUs 
 [1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
     TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
-UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
+UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 Pos 1 random identity 2a1acff161000000:
     last RRC activity: 1 seconds ago
     PDU session 0 ID 0 status released
     PDU session 1 ID 0 status released
@@ -694,7 +694,7 @@ UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
 1 connected DUs 
 [1] DU ID 3584 (gNB-OAI) integrated DU-CU: nrCellID 12345678, PCI 0, SSB ARFCN 653952
     TDD: band 77 ARFCN 653424 SCS 30 (kHz) PRB 106
-UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 random identity 2a1acff161000000:
+UE 0 CU UE ID 1 DU UE ID 55145 RNTI d769 Pos 1 random identity 2a1acff161000000:
     last RRC activity: 1 seconds ago
     PDU session 0 ID 0 status released
     PDU session 1 ID 0 status released

@@ -8,21 +8,19 @@ fn importData() {
     nrCellCU_by_nRCellId ?= nodeList<node<NrCellCU>>::new();
 
 
-    var reader = JsonReader::new("data/json/test.json");
+    var reader = JsonReader::new("data/json/unifiedoutput.json");
     /*
     var UEbyTime = nodeIndex<int, UE>::new();
     var UEbyZone = nodeIndex<int, UE>::new();
     */
-
+     info("Importing init from json ...");
     while(reader.available() > 0) {
         var parsedArray = reader.read() as Array;
         for(position, arrayElement in parsedArray) {
             var ran = arrayElement.get("RAN");
 
             var nrCellCUJsonObj = ran.get("NrCellCU");
-            var nrCellDUJsonObj = ran.get("NrCellDU");
-                
-
+            var nrCellDUJsonObj = ran.get("NrCellDU");                
 
             /*
             Retrieve or create the NrCellCU for this log record
@@ -36,7 +34,7 @@ fn importData() {
                  nrCellCU = NrCellCU {
                     nRCellId: cellId,
                     physicalCellId: nrCellDUJsonObj.get("PIC") as int,
-                    nrCellDU_by_index: nodeList<node<NrCellDU>>::new(),
+                    //nrCellDU_by_index: nodeList<node<NrCellDU>>::new(),
                     nrCellDU_by_duId: nodeList<node<NrCellDU>>::new(),
                 };
                 nrCellCU_node = node<NrCellCU>::new(nrCellCU);
@@ -92,7 +90,7 @@ fn importData() {
                         du: nrCellDU_node,
                         rnti: ueJsonObj.get("RNTI") as String,
                         id: ueJsonObj.get("id") as int,
-                        position: 1,
+                        position: ueJsonObj.get("Position") as int,
                         synchronizationSignal:  nodeTime<SynchronizationSignal>::new(),
                         pdus: nodeList<PDUSession>::new(),
                     });
@@ -110,12 +108,14 @@ fn importData() {
 
                 //Update signal measures
                 var sincSignalJsonObj = ueJsonObj.get("SynchronizationSignal");
-                var signal = SynchronizationSignal {
-                    sinr : sincSignalJsonObj.get("SINR") as float,
-                    rsrq : sincSignalJsonObj.get("RSRQ") as float,
-                    rsrp : sincSignalJsonObj.get("RSRP") as int,
-                };
-                ue_node->synchronizationSignal.setAt(t, signal);
+                if(sincSignalJsonObj != null) {
+                    var signal = SynchronizationSignal {
+                        sinr : sincSignalJsonObj.get("SINR") as float,
+                        rsrq : sincSignalJsonObj.get("RSRQ") as float,
+                        rsrp : sincSignalJsonObj.get("RSRP") as int,
+                    };
+                    ue_node->synchronizationSignal.setAt(t, signal);
+              }  
             }
         }
             
