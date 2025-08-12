@@ -22,9 +22,9 @@ Contribution guide not yet defined
 J-S Sottet and G. Nain are main contributors
 Thanks to Ayat Zaki Hindi for her help to map log on network (3GPP inspired) specification
 
-This work is funded by the Smart Networks and Services Joint Undertaking (SNS
+This work done in the context of 6GTWIN project, funded by the Smart Networks and Services Joint Undertaking (SNS
 JU) under the European Union’s Horizon Europe research and innovation program under Grant Agreement
-No 101136314
+No 101136314.
 
 ## License
 Under definition...
