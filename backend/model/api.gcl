@@ -1,5 +1,3 @@
-module api.graph
-
 import model.*
 
 @expose
