@@ -1,0 +1,17 @@
+module api.graph
+
+import model.*
+
+@expose
+fn graphSnapshot(t:Time): [Node] {
+    let cu = NRCELLCU.nodesAt(t)
+    let du = NRCELLDU.nodesAt(t)
+    let ue = UE.nodesAt(t)
+    return cu + du + ue
+}
+
+@expose
+fn ueSignal(ueId:String, t:Time): Float {
+    let ue = UE.byId(ueId)
+    return ue.synchronizationSignal.at(t) // Replace 'signal' with your actual temporal property
+}
