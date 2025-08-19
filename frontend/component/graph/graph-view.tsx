@@ -15,7 +15,7 @@ export class GrapView extends HTMLElement {
   maxTime: gc.time | null = gc.time.create(1000*1000*60*145);
 
   networkContainer: HTMLDivElement;
-  network: Network;
+  network!: Network;
 
   constructor() {
     super();
