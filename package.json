@@ -1,0 +1,24 @@
+{
+  "name": "greycat-template-vite-ts",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "gen": "greycat codegen",
+    "build": "tsc && vite build"
+  },
+  "dependencies": {
+    "@greycat/web": "https://get.greycat.io/files/sdk/web/stable/7.1/7.1.45-stable.tgz"
+  },
+  "devDependencies": {
+    "vis-network": "10.0.1",
+    "typescript": "5.9.2",
+    "vite": "7.1.3"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "rootDir": ".",
+    "target": "ES2020",
+    "module": "ESNext",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "types": ["vite/client", "./project.d.ts"],
+    "skipLibCheck": true,
+    "useDefineForClassFields": true,
+    "paths": {
+      "~/*": ["./frontend/*"]
+    },
+
+    /* TSX */
+    "jsx": "react-jsx",
+    "jsxImportSource": "@greycat/web",
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true
+  },
+  "include": ["frontend"],
+  "exclude": ["node_modules", "vite.config.js"]
+}

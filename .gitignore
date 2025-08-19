@@ -2,3 +2,6 @@
 /.DS_Store
 /data/.DS_Store
 /files/
+/node_modules/
+/webroot/
+/lib/

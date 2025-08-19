@@ -1,13 +1,67 @@
 
+@volatile
+type NetworkNodeItem {
+    id: String;
+    type: String;
+    label: String;
+}
+
+@volatile
+type NetworkEdgeItem {
+    from: String;
+    to: String;
+}
+
+@volatile
+type NetworkSnapshot {
+    nodes: Array<NetworkNodeItem>;
+    edges: Array<NetworkEdgeItem>;
+}
+
 @expose
-fn graphSnapshot(t:time): any? {
-    /*
-    let cu = NRCELLCU.nodesAt(t)
-    let du = NRCELLDU.nodesAt(t)
-    let ue = UE.nodesAt(t)
-    return cu + du + ue
-    */
-    return null;
+fn graphSnapshot(t:time?): NetworkSnapshot {
+    
+    var nodes = Array<NetworkNodeItem>{};
+    var edges = Array<NetworkEdgeItem>{};
+
+    for(id, nCu in nrCellCU_by_nRCellId) {
+        nodes.add(NetworkNodeItem{id: "${nCu->nRCellId}", type: "NrCellCU", label: "NrCellCU id:${nCu->nRCellId}"});
+
+        for(_, nDu in nCu->nrCellDU_by_duId) {
+            nodes.add(NetworkNodeItem{id: "${nDu->physicalCellId}", type: "NrCellDU", label: "NrCellDU id:${nCu->physicalCellId}"});
+            edges.add(NetworkEdgeItem{from: "${nCu->nRCellId}", to: "${nDu->physicalCellId}"});
+
+            //BWP
+            nodes.add(NetworkNodeItem{id: "${nDu->physicalCellId}_bwp", type: "BWP", label: "BWP RBs:${nDu->bwp.numberOfRBs} Sub.Car.Spac.:${nDu->bwp.subCarrierSpacing}"});
+            edges.add(NetworkEdgeItem{from: "${nDu->physicalCellId}", to: "${nDu->physicalCellId}_bwp"});
+
+            
+
+            var snapTime = t;
+            if(snapTime == null) {
+                snapTime = nDu->userEquipments.lastTime();
+            }
+
+            var ueList: nodeList<node<UE>> = nDu->userEquipments.resolveAt(snapTime!!)!!; //TODO: the list can be null. Case to be handled.
+            
+            for(_, nUE in ueList) {
+                var nUE_id = "${nDu->physicalCellId}_${nUE->id}";
+                var signal = nUE->synchronizationSignal.resolveAt(snapTime!!);
+                
+                nodes.add(NetworkNodeItem{id: "${nUE_id}", type: "UE", label: "UE location:${nUE->position} SINR: ${signal.sinr}"});
+                edges.add(NetworkEdgeItem{from: "${nDu->physicalCellId}", to: "${nUE_id}"});
+
+                //SyncSign
+                nodes.add(NetworkNodeItem{id: "${nUE_id}_sync", type: "Sync", label: "Sync SINR:${signal.sinr} RSRP: ${signal.rsrp} RSRQ: ${signal.rsrq}"});
+                edges.add(NetworkEdgeItem{from: "${nUE_id}", to: "${nUE_id}_sync"});
+            }
+        }
+    }
+
+    return NetworkSnapshot{
+        nodes: nodes,
+        edges: edges,
+    };
 }
 
 @expose

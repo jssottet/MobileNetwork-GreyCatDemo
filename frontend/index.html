@@ -3,24 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <title>GreyCat Mobile Network Viewer</title>
-  <style>
-    #graph {
-      width: 100%;
-      height: 80vh;
-      border: 1px solid #ccc;
-    }
-    #controls {
-      margin-top: 10px;
-    }
-  </style>
 </head>
-<body>
-  <div id="graph"></div>
-  <div id="controls">
-    Time: <input type="range" id="timeSlider" min="0" max="1000" step="1" value="0">
-    <span id="timeValue">0</span>
-    | UE Signal: <span id="signalValue">N/A</span>
-  </div>
-  <script type="module" src="./main.js"></script>
-</body>
+  <body>
+    <script type="module" src="landing/landing.tsx"></script>
+  </body>
 </html>
