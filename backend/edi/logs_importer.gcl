@@ -1,14 +1,7 @@
-use io;
-use runtime;
-use model;
-
 
 fn importData() {
-    //Initialize global CU index (entry point) if not already done
-    nrCellCU_by_nRCellId ?= nodeList<node<NrCellCU>>::new();
 
-
-    var reader = JsonReader::new("data/json/unifiedoutput.json");
+    var reader = JsonReader<any>{path: "data/json/unifiedoutput.json"};
     /*
     var UEbyTime = nodeIndex<int, UE>::new();
     var UEbyZone = nodeIndex<int, UE>::new();
@@ -34,10 +27,10 @@ fn importData() {
                  nrCellCU = NrCellCU {
                     nRCellId: cellId,
                     physicalCellId: nrCellDUJsonObj.get("PIC") as int,
-                    //nrCellDU_by_index: nodeList<node<NrCellDU>>::new(),
-                    nrCellDU_by_duId: nodeList<node<NrCellDU>>::new(),
+                    nrCellDU_by_index: nodeList<node<NrCellDU>>{},
+                    nrCellDU_by_duId: nodeList<node<NrCellDU>>{},
                 };
-                nrCellCU_node = node<NrCellCU>::new(nrCellCU);
+                nrCellCU_node = node<NrCellCU>{nrCellCU};
                 nrCellCU_by_nRCellId.set(cellId, nrCellCU_node);
             } else {
                 //Else simply resolve the node to retrieve its content (the actual nrCellCU object)
@@ -68,9 +61,9 @@ fn importData() {
                     },
                     policy: CommunicationTypeUtils::parseCommuncationType(nrCellDUJsonObj.get("Policy") as String),
                     bwp : bwp,
-                    userEquipments: nodeTime<nodeList<node<UE>>>::new(),
+                    userEquipments: nodeTime<nodeList<node<UE>>>{},
                 };
-                nrCellDU_node = node<NrCellDU>::new(nrCellDU);
+                nrCellDU_node = node<NrCellDU>{nrCellDU};
                 nrCellCU.nrCellDU_by_duId.set(duId, nrCellDU_node);
             } else {
                 nrCellDU = *nrCellDU_node;
@@ -86,17 +79,19 @@ fn importData() {
                 var ue_node = ueListAtT?.get(ueJsonObj.get("id") as int);
                 if(ue_node == null) {
                     //If UE does not yet exists in the list
-                    ue_node = node<UE>::new(UE {
-                        du: nrCellDU_node,
-                        rnti: ueJsonObj.get("RNTI") as String,
-                        id: ueJsonObj.get("id") as int,
-                        position: ueJsonObj.get("Position") as int,
-                        synchronizationSignal:  nodeTime<SynchronizationSignal>::new(),
-                        pdus: nodeList<PDUSession>::new(),
-                    });
+                    ue_node = node<UE>{
+                        UE {
+                            du: nrCellDU_node,
+                            rnti: ueJsonObj.get("RNTI") as String,
+                            id: ueJsonObj.get("id") as int,
+                            position: ueJsonObj.get("Position") as int,
+                            synchronizationSignal:  nodeTime<SynchronizationSignal>{},
+                            pdus: nodeList<PDUSession>{},
+                        }
+                    };
                     
                     //Update the list by copying the previous and setting the new at time t
-                    var newUeListAtT = nodeList<node<UE>>::new();
+                    var newUeListAtT = nodeList<node<UE>>{};
                     if(ueListAtT != null) {
                         for(t, v: node<UE> in ueListAtT) {
                             newUeListAtT.set(t, v);

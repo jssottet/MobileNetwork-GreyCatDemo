@@ -1,15 +1,20 @@
-import model.*
 
 @expose
-fn graphSnapshot(t:Time): [Node] {
+fn graphSnapshot(t:time): any? {
+    /*
     let cu = NRCELLCU.nodesAt(t)
     let du = NRCELLDU.nodesAt(t)
     let ue = UE.nodesAt(t)
     return cu + du + ue
+    */
+    return null;
 }
 
 @expose
-fn ueSignal(ueId:String, t:Time): Float {
+fn ueSignal(ueId:String, t:time): float {
+    /*
     let ue = UE.byId(ueId)
     return ue.synchronizationSignal.at(t) // Replace 'signal' with your actual temporal property
+    */
+    return -9999999999.0;
 }
