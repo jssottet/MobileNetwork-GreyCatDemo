@@ -33,7 +33,8 @@ export class GrapView extends HTMLElement {
     this.timeInput.value = gc.time.create(1000*1000*60);
 
     this.networkContainer = document.createElement("div");
-    this.networkContainer.setAttribute("height", "200px");
+    this.networkContainer.setAttribute("height", "900px");
+    this.networkContainer.style.width="100%";
   }
 
   connectedCallback() {
@@ -54,7 +55,30 @@ export class GrapView extends HTMLElement {
     var result = await gc.api.graphSnapshot(t);
 
     result.nodes.forEach(n => {
-      nodes.add(n);
+      let color = "#97C2FC";
+      let shape: string = "dot";
+      let size = 15;
+      
+      if (n.type === "UE") {
+        color = "#FF6B6B";
+        shape = "box";
+        size = 25;
+      } else if (n.type === "NrCellDU") {
+        color = "#4ECDC4";
+        size = 25;
+      } else if (n.type === "Sync") {
+        color = "#64ff3df5";
+        shape = "box";
+        size = 35;
+      }
+      nodes.add({
+        //cast workaround TODO: possibly use visNode / visEdge instead
+        ...(n as any), 
+        color: { background: color, border: "#333" },
+        font: { color: "#1a1515ff" },
+        shape,
+        size,
+      });
     });
 
     result.edges.forEach(n => {
@@ -85,7 +109,7 @@ export class GrapView extends HTMLElement {
             if (this.interval) {
               clearInterval(this.interval);
               this.interval = undefined;
-              (e.target as HTMLButtonElement).textContent = '⏵';
+              (e.target as HTMLButtonElement).textContent = '▶️';
             } else {
               (e.target as HTMLButtonElement).textContent = '⏸';
               this.interval = window.setInterval(() => {
@@ -108,10 +132,14 @@ export class GrapView extends HTMLElement {
         </sl-button>
       </div>
     );
-
     let controlBar = document.createElement('div');
+    controlBar.style.display = "flex";
+    controlBar.style.alignItems = "center";
+    controlBar.style.gap = "12px";
+    controlBar.style.marginBottom = "10px";
+
     controlBar.appendChild(
-      <div>
+      <div style="display: flex; gap: 10px; align-items: center;">
         Time: {timeSlider}
       | UE Signal: <span id="signalValue">N/A</span>
       </div>
@@ -121,17 +149,36 @@ export class GrapView extends HTMLElement {
 
     var options = {
       autoResize: true,
-      width: '800px',
+      width: '100%',
       height: '600px',
       layout: {
         randomSeed: 1234567,
       },
+      nodes: {
+        font : {
+          size : 25,
+          face : "arial",
+          color: "#1a1515ff",
+        },
+        borderWidth : 2,
+        shadow : true,
+      },
       edges:{
+        smooth: {type :"dynamic"},
         arrows: {
           to: {
             enabled: true,
+            scaleFactor : 0.7,
           },
         },
+      physics: {
+        stabilization: false,
+        barnesHut: {
+          gravitationalConstant: -2000,
+          springLength: 120,
+          springConstant: 0.04,
+        },
+      },
       }
     };
     this.network = new Network(this.networkContainer, {}, options);
