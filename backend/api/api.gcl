@@ -35,8 +35,6 @@ fn graphSnapshot(t:time?): NetworkSnapshot {
             nodes.add(NetworkNodeItem{id: "${nDu->physicalCellId}_bwp", type: "BWP", label: "BWP RBs:${nDu->bwp.numberOfRBs} Sub.Car.Spac.:${nDu->bwp.subCarrierSpacing}"});
             edges.add(NetworkEdgeItem{from: "${nDu->physicalCellId}", to: "${nDu->physicalCellId}_bwp"});
 
-            
-
             var snapTime = t;
             if(snapTime == null) {
                 snapTime = nDu->userEquipments.lastTime();
@@ -48,7 +46,7 @@ fn graphSnapshot(t:time?): NetworkSnapshot {
                 var nUE_id = "${nDu->physicalCellId}_${nUE->id}";
                 var signal = nUE->synchronizationSignal.resolveAt(snapTime!!);
                 
-                nodes.add(NetworkNodeItem{id: "${nUE_id}", type: "UE", label: "UE location:${nUE->position} SINR: ${signal.sinr}"});
+                nodes.add(NetworkNodeItem{id: "${nUE_id}", type: "UE", label: "UE location:${nUE->position}"}); // SINR: ${signal.sinr}"});
                 edges.add(NetworkEdgeItem{from: "${nDu->physicalCellId}", to: "${nUE_id}"});
 
                 //SyncSign
