@@ -11,6 +11,7 @@ type NetworkEdgeItem {
     id: String;
     from: String;
     to: String;
+    length: int;
 }
 
 @volatile
@@ -29,11 +30,11 @@ fn graphSnapshot(t: time?): NetworkSnapshot {
 
         for (_, nDu in nCu->nrCellDU_by_duId) {
             nodes.add(NetworkNodeItem { id: "${nDu->physicalCellId}", group: "CellDU", label: "Id: ${nCu->physicalCellId}", data: *nDu });
-            edges.add(NetworkEdgeItem { id: "${nCu->nRCellId}-${nDu->physicalCellId}", from: "${nCu->nRCellId}", to: "${nDu->physicalCellId}" });
+            edges.add(NetworkEdgeItem { id: "${nCu->nRCellId}-${nDu->physicalCellId}", from: "${nCu->nRCellId}", to: "${nDu->physicalCellId}", length: 300 });
 
             //BWP
             nodes.add(NetworkNodeItem { id: "${nDu->physicalCellId}_bwp", group: "BWP", label: "RBs:${nDu->bwp.numberOfRBs} Sub.Car.Spac.:${nDu->bwp.subCarrierSpacing}" });
-            edges.add(NetworkEdgeItem { id: "${nDu->physicalCellId}-${nDu->physicalCellId}_bwp", from: "${nDu->physicalCellId}", to: "${nDu->physicalCellId}_bwp" });
+            edges.add(NetworkEdgeItem { id: "${nDu->physicalCellId}-${nDu->physicalCellId}_bwp", from: "${nDu->physicalCellId}", to: "${nDu->physicalCellId}_bwp", length: 100 });
 
             var snapTime = t;
 
@@ -45,7 +46,7 @@ fn graphSnapshot(t: time?): NetworkSnapshot {
                 var signal = nUE->synchronizationSignal.resolveAtWithin(snapTime!!, 1_min);
                 if (signal != null) {
                     nodes.add(NetworkNodeItem { id: "${nUE_id}", group: "UE", label: "Location: ${nUE->position}", data: *nUE }); // SINR: ${signal.sinr}"});
-                    edges.add(NetworkEdgeItem { id: "${nDu->physicalCellId}-${nUE_id}", from: "${nDu->physicalCellId}", to: "${nUE_id}" });
+                    edges.add(NetworkEdgeItem { id: "${nDu->physicalCellId}-${nUE_id}", from: "${nDu->physicalCellId}", to: "${nUE_id}", length: 100 });
 
                     //SyncSign
                     nodes.add(
@@ -56,7 +57,7 @@ fn graphSnapshot(t: time?): NetworkSnapshot {
                             data: signal
                         }
                     );
-                    edges.add(NetworkEdgeItem { id: "${nUE_id}-${nUE_id}_sync", from: "${nUE_id}", to: "${nUE_id}_sync" });
+                    edges.add(NetworkEdgeItem { id: "${nUE_id}-${nUE_id}_sync", from: "${nUE_id}", to: "${nUE_id}_sync", length: 200 });
                 }
             }
         }
