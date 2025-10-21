@@ -1,11 +1,8 @@
 #!/bin/bash
-#Commented normal set-up
 
-#Install Greycat
-#./install.sh
-#Start the server (local setup for my machine)
-#/home/sottet/TechProjects/GreyCat/newVersion/6.10.109-stable/bin/greycat run 
+curl -fsSL https://get.greycat.io/install.sh | bash -s stable
+
+pnpm i && pnpm build
+
 rm -rf ./gcdata && greycat serve --user=1
 
-#Server configuration
-#serve --user=1

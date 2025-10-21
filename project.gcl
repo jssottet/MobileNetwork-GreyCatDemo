@@ -1,14 +1,12 @@
-
 @include("backend");
-@library("std", "7.1.487-stable");
-@library("web", "7.1.45-stable");
+@library("std", "7.3.300-stable");
+@library("explorer", "7.3.13-stable");
 
 fn main() {
-
-    if(nrCellCU_by_nRCellId.size()==0) {
+    if (nrCellCU_by_nRCellId.size() == 0) {
         info("Importing Data ...");
         importData();
         info("Import done.");
     }
-    info("Application ready to serve.");    
+    info("Application ready to serve.");
 }

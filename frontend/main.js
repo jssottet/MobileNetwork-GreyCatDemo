@@ -1,9 +1,6 @@
-
 // 19.08.25: UNUSED //
-
-
-import * as gc from "@greycat/web";
-import * as project from "../gen/project.js";
+import "@greycat/web";
+import "@greycat/web/greycat.css";
 import { Network } from "vis-network";
 
 let network;
@@ -20,7 +17,7 @@ async function renderGraph(time) {
     nodes.push({
       id: item.id,
       label: `${item.typeName}\n${item.id}`,
-      shape: "ellipse"
+      shape: "ellipse",
     });
     if (item.parentId) {
       edges.push({ from: item.parentId, to: item.id });
@@ -31,7 +28,9 @@ async function renderGraph(time) {
   const visData = { nodes, edges };
 
   if (!network) {
-    network = new Network(container, visData, { physics: { stabilization: true } });
+    network = new Network(container, visData, {
+      physics: { stabilization: true },
+    });
   } else {
     network.setData(visData);
   }

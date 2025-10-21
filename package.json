@@ -9,10 +9,10 @@
     "build": "tsc && vite build"
   },
   "dependencies": {
-    "@greycat/web": "https://get.greycat.io/files/sdk/web/stable/7.1/7.1.45-stable.tgz"
+    "@greycat/web": "https://get.greycat.io/files/sdk/web/stable/7.3/7.3.25-stable.tgz",
+    "vis-network": "10.0.2"
   },
   "devDependencies": {
-    "vis-network": "10.0.1",
     "typescript": "5.9.2",
     "vite": "7.1.3"
   },
