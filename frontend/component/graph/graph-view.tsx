@@ -270,6 +270,7 @@ export class GrapView extends HTMLElement {
       </div>
     );
 
+
     this.replaceChildren(
       <>
         <div className={"control-bar"}>
@@ -279,6 +280,9 @@ export class GrapView extends HTMLElement {
         </div>
         {this.networkContainer}
         {this.sidebar}
+        <div className="footer">
+          <p>Powered by <a href="https://greycat.io">GreyCat</a></p>
+        </div>
       </>
     );
 
