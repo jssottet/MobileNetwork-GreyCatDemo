@@ -72,6 +72,7 @@ type UE {
     pdus: nodeList<PDUSession>;
     du: node<NrCellDU>;
     position: int;
+    connected: bool?;
     synchronizationSignal: nodeTime<SynchronizationSignal>;
 }
 

@@ -3,6 +3,7 @@ type NetworkNodeItem {
     id: String;
     label: String;
     group: String;
+    gcNode: node<any>?;
     data: any?;
 }
 
@@ -22,14 +23,15 @@ type NetworkSnapshot {
 
 @expose
 fn graphSnapshot(t: time?): NetworkSnapshot {
+    var rand = Random{};
     var nodes = Array<NetworkNodeItem> {};
     var edges = Array<NetworkEdgeItem> {};
 
     for (id, nCu in nrCellCU_by_nRCellId) {
-        nodes.add(NetworkNodeItem { id: "${nCu->nRCellId}", group: "CellCU", label: "Id: ${nCu->nRCellId}", data: *nCu });
+        nodes.add(NetworkNodeItem { id: "${nCu->nRCellId}", group: "CellCU", label: "CU: ${nCu->nRCellId}", gcNode: nCu, data: *nCu });
 
         for (_, nDu in nCu->nrCellDU_by_duId) {
-            nodes.add(NetworkNodeItem { id: "${nDu->physicalCellId}", group: "CellDU", label: "Id: ${nCu->physicalCellId}", data: *nDu });
+            nodes.add(NetworkNodeItem { id: "${nDu->physicalCellId}", group: "CellDU", label: "DU: ${nCu->physicalCellId}", gcNode: nDu, data: *nDu });
             edges.add(NetworkEdgeItem { id: "${nCu->nRCellId}-${nDu->physicalCellId}", from: "${nCu->nRCellId}", to: "${nDu->physicalCellId}", length: 300 });
 
             //BWP
@@ -39,13 +41,23 @@ fn graphSnapshot(t: time?): NetworkSnapshot {
             var snapTime = t;
 
             for (_, nUE in nDu->userEquipments) {
+                if(nUE->connected == false && rand.uniformf(0.0,1.0)<0.1) {
+                    nUE->connected = true;
+                } else if(rand.uniformf(0.0,1.0)<0.05) {
+                    nUE->connected = false;
+                }
+
+                if(nUE->connected == false) {
+                    continue;
+                }
+
                 if (snapTime == null) {
                     snapTime = nUE->synchronizationSignal.lastTime();
                 }
                 var nUE_id = "${nDu->physicalCellId}_${nUE->id}";
                 var signal = nUE->synchronizationSignal.resolveAtWithin(snapTime!!, 1_min);
                 if (signal != null) {
-                    nodes.add(NetworkNodeItem { id: "${nUE_id}", group: "UE", label: "Location: ${nUE->position}", data: *nUE }); // SINR: ${signal.sinr}"});
+                    nodes.add(NetworkNodeItem { id: "${nUE_id}", group: "UE", label: "UE: ${nUE->id}", gcNode: nUE, data: *nUE }); // SINR: ${signal.sinr}"});
                     edges.add(NetworkEdgeItem { id: "${nDu->physicalCellId}-${nUE_id}", from: "${nDu->physicalCellId}", to: "${nUE_id}", length: 100 });
 
                     //SyncSign
@@ -66,6 +78,33 @@ fn graphSnapshot(t: time?): NetworkSnapshot {
         nodes: nodes,
         edges: edges,
     };
+}
+
+@volatile
+type SignalRecord {
+    t: time;
+    rsrp: int;
+    rsrq: float;
+    sinr: float;
+}
+
+@expose
+fn getSignal(nUE: node<UE>): Table<SignalRecord>? {
+    var ue = *nUE;
+    if(ue == null || !(ue is UE)) {
+        return null;
+    }
+    
+    var res = Table<SignalRecord>{};
+    for(t, v in ue.synchronizationSignal) {
+        res.add_row(SignalRecord{
+            t: t,
+            rsrp: v.rsrp,
+            rsrq: v.rsrq,
+            sinr: v.sinr,
+        });
+    }
+    return res;
 }
 
 @expose

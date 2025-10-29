@@ -1,6 +1,6 @@
 //Creation of a WebComponent for the GraphView
 
-import { sl } from "@greycat/web";
+import { GuiChart, sl } from "@greycat/web";
 import { Network, Node, DataSet } from "vis-network/standalone";
 import "@greycat/web/greycat.css";
 import "./graph-view.css";
@@ -32,6 +32,9 @@ export class GrapView extends HTMLElement {
         height: "100%",
         layout: {
           randomSeed: 1234567,
+          hierarchical: {
+            direction: "UD",
+          },
         },
         nodes: {
           shape: "dot",
@@ -119,7 +122,7 @@ export class GrapView extends HTMLElement {
     const x = -this.networkContainer.clientWidth / 2 - 100;
     const y = -this.networkContainer.clientHeight / 2 - 100;
     const step = 80;
-    let legend: Node[] = [];
+    const legend: Node[] = [];
     legend.push({
       id: 1000,
       x: x,
@@ -162,9 +165,9 @@ export class GrapView extends HTMLElement {
       physics: false,
     });
     this.nodes = new DataSet(result.nodes);
-    console.log(this.nodes);
+    //console.log(this.nodes);
 
-    result.nodes.push(...(legend as any));
+    //result.nodes.push(...(legend as any));
     this.network.setData({
       nodes: result.nodes,
       edges: result.edges,
@@ -186,7 +189,51 @@ export class GrapView extends HTMLElement {
 
     this.sidebar.label = nodeId;
 
-    this.sidebar.replaceChildren(<gui-object value={node.data}></gui-object>);
+    const sideContent = <div>
+      <gui-object value={node.data}></gui-object>
+    </div>
+
+    if(node.group == "UE") {
+      let chart: GuiChart = new GuiChart();
+      chart.style= 'width: 100%;'
+      chart.config = {
+        xAxis: {},
+        yAxes: {
+          y: {},
+        },
+        series: [
+          {
+            type: 'line',
+            title: "RSRP",
+            yCol: gc.api.SignalRecord.$fields.rsrp,
+            yAxis: 'y',
+          },
+          {
+            type: 'line',
+            title: 'RSRQ',
+            yCol: gc.api.SignalRecord.$fields.rsrq,
+            yAxis: 'y',
+          },
+          {
+            type: 'line',
+            title: 'SINR',
+            yCol: gc.api.SignalRecord.$fields.sinr,
+            yAxis: 'y',
+          },
+        ],
+      };
+      if(node.gcNode != null) {
+        gc.api.getSignal(node.gcNode).then((res)=>{
+          if(res != null) {
+            chart.value = res;
+          }
+        })
+      }
+      sideContent.appendChild(chart);
+    }
+
+    this.sidebar.replaceChildren(sideContent);
+    
     this.sidebar.open = true;
   }
 
@@ -207,8 +254,6 @@ export class GrapView extends HTMLElement {
                 this.timeSlider.value =
                   this.timeSlider.value + gc.duration.from_mins(1).ms;
                 if (this.timeSlider.value >= this.maxTime.epochMs) {
-                  console.log("yes");
-
                   this.timeSlider.value = this.minTime.epochMs;
                   (e.target as HTMLButtonElement).textContent = "▶";
                   clearInterval(this.interval);
